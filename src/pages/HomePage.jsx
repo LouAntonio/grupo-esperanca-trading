@@ -1,84 +1,78 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useCallback } from 'react'
 import { Link } from 'react-router-dom'
-import services from '../data/services'
 import products from '../data/products'
 
+const row1 = ['/img/files/slider/1.png', '/img/files/slider/2.png', '/img/files/slider/3.png', '/img/files/slider/4.png']
+const row2 = ['/img/files/slider/5.png', '/img/files/slider/6.png', '/img/files/slider/7.png', '/img/files/slider/8.png']
+
+function MarqueeRow({ images, speed = 0.6, dir }) {
+  const containerRef = useRef(null)
+  const trackRef = useRef(null)
+  const posRef = useRef(dir === 'right' ? -1 : 0)
+  const rafRef = useRef(null)
+  const setWidthRef = useRef(0)
+  const [paused, setPaused] = useState(false)
+  const readyRef = useRef(false)
+
+  const measure = useCallback(() => {
+    const track = trackRef.current
+    if (!track || track.scrollWidth === 0) return
+    setWidthRef.current = track.scrollWidth / 3
+    readyRef.current = true
+  }, [])
+
+  useEffect(() => {
+    measure()
+    const imgs = trackRef.current?.querySelectorAll('img') || []
+    let count = 0
+    const check = () => { count++; if (count === imgs.length) measure() }
+    imgs.forEach(img => img.complete ? check() : (img.onload = check))
+  }, [measure])
+
+  useEffect(() => {
+    const step = () => {
+      const sw = setWidthRef.current
+      if (readyRef.current && sw > 0 && !paused) {
+        if (dir === 'left') {
+          posRef.current -= speed
+          if (posRef.current <= -sw) posRef.current += sw
+        } else {
+          posRef.current += speed
+          if (posRef.current >= 0) posRef.current -= sw
+        }
+        trackRef.current.style.transform = `translateX(${posRef.current}px)`
+      }
+      rafRef.current = requestAnimationFrame(step)
+    }
+    rafRef.current = requestAnimationFrame(step)
+    return () => cancelAnimationFrame(rafRef.current)
+  }, [paused, speed, dir])
+
+  return (
+    <div
+      ref={containerRef}
+      style={{ overflow: 'hidden', padding: '20px 0' }}
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+    >
+      <div ref={trackRef} style={{ display: 'flex', width: 'max-content' }}>
+        {[...images, ...images, ...images].map((src, i) => (
+          <img key={i} src={src} alt="" style={{ height: 160, display: 'block' }} />
+        ))}
+      </div>
+    </div>
+  )
+}
+
 export default function HomePage() {
-  const splide1Ref = useRef(null)
-  const splide2Ref = useRef(null)
-
-  useEffect(() => {
-    let splide1, splide2
-    async function initSplide() {
-      const Splide = (await import('@splidejs/splide')).default
-      const AutoScroll = (await import('@splidejs/splide-extension-auto-scroll')).default
-
-      if (splide1Ref.current) {
-        splide1 = new Splide(splide1Ref.current, {
-          type: 'loop',
-          drag: 'free',
-          focus: 'center',
-          autoWidth: true,
-          autoScroll: { speed: 1 },
-          pagination: false,
-          arrows: false,
-        })
-        splide1.mount({ AutoScroll })
-      }
-
-      if (splide2Ref.current) {
-        splide2 = new Splide(splide2Ref.current, {
-          type: 'loop',
-          drag: 'free',
-          focus: 'center',
-          autoWidth: true,
-          autoScroll: { speed: -1 },
-          pagination: false,
-          arrows: false,
-        })
-        splide2.mount({ AutoScroll })
-      }
-    }
-    initSplide()
-    return () => {
-      splide1?.destroy()
-      splide2?.destroy()
-    }
-  }, [])
-
-  useEffect(() => {
-    const splideCss = document.createElement('link')
-    splideCss.rel = 'stylesheet'
-    splideCss.href = 'https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/css/splide.min.css'
-    document.head.appendChild(splideCss)
-  }, [])
-
   return (
     <>
       <div className="slider-area slider-margin sliderMargin">
         <div className="slider-active">
           <div className="single-slider slider-height d-flex align-items-center" style={{ height: '100vh', backgroundImage: 'url(/img/files/1920-x-1080.pn)' }}>
             <div className="w-100">
-              <section className="splide" ref={splide1Ref} id="carrossel1">
-                <div className="splide__track">
-                  <ul className="splide__list">
-                    <li className="splide__slide"><a href="#1"><img src="/img/files/slider/1.png" alt="" /></a></li>
-                    <li className="splide__slide"><a href="#1"><img src="/img/files/slider/2.png" alt="" /></a></li>
-                    <li className="splide__slide"><a href="#1"><img src="/img/files/slider/3.png" alt="" /></a></li>
-                    <li className="splide__slide"><a href="#1"><img src="/img/files/slider/4.png" alt="" /></a></li>
-                  </ul>
-                </div>
-              </section>
-              <section className="splide mt-3" ref={splide2Ref} id="carrossel2">
-                <div className="splide__track">
-                  <ul className="splide__list">
-                    <li className="splide__slide"><a href="#1"><img src="/img/files/slider/5.png" alt="" /></a></li>
-                    <li className="splide__slide"><a href="#1"><img src="/img/files/slider/6.png" alt="" /></a></li>
-                    <li className="splide__slide"><a href="#1"><img src="/img/files/slider/7.png" alt="" /></a></li>
-                    <li className="splide__slide"><a href="#1"><img src="/img/files/slider/8.png" alt="" /></a></li>
-                  </ul>
-                </div>
-              </section>
+              <MarqueeRow images={row1} dir="left" speed={0.6} />
+              <MarqueeRow images={row2} dir="right" speed={0.6} />
             </div>
           </div>
         </div>
@@ -367,7 +361,6 @@ function BrandsCarousel() {
     import('swiper/bundle').then(({ default: Swiper }) => {
       if (swiperRef.current) {
         new Swiper(swiperRef.current, {
-          loop: true,
           slidesPerView: 1,
           navigation: true,
           autoplay: true,
