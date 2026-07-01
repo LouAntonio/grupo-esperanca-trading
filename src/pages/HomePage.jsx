@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
-import courses from '../data/courses'
 import services from '../data/services'
 import products from '../data/products'
 
@@ -85,19 +84,67 @@ export default function HomePage() {
         </div>
       </div>
 
-      <div className="about-area pos-relative">
+      <div className="video-area pt-4 pb-4" style={{ backgroundImage: 'url(/img/files/1920-x-905.png)' }}>
         <div className="container">
           <div className="row">
-            <div className="col-xl-6 col-lg-6 d-none">
-              <div className="about2-img">
-                <img src="/img/files/628-x-893.png" className="rounded" alt="" />
+            <div className="col-xl-10 col-lg-10 offset-lg-1 offset-xl-1">
+              <div className="video-wrapper text-center mb-3">
+                <div className="video-text">
+                  <h1 style={{ fontSize: '35px' }}>Grupo Esperança Trading, Lda</h1>
+                  <h3 style={{ fontSize: '20px', fontWeight: 300 }}>Da terra angolana para a sua mesa</h3>
+                </div>
               </div>
             </div>
+          </div>
+          <div className="counter-bg pt-70 pb-50" style={{ backgroundColor: '#00000059' }}>
+            <div className="row justify-content-around">
+              <div className="col-xl-3 col-lg-3 col-md-6">
+                <div className="counter-wrapper mb-30">
+                  <div className="counter-icon">
+                    <span className="plus">+</span>
+                    <div className="counter-text">
+                      <CountUp end={3} />
+                      <span className="textCounter">Marcas</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-xl-3 col-lg-3 col-md-6">
+                <div className="counter-wrapper mb-30">
+                  <div className="counter-icon">
+                    <span className="plus">+</span>
+                    <div className="counter-text">
+                      <CountUp end={100} />
+                      <span className="textCounter">% Orgânico</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-xl-3 col-lg-3 col-md-6">
+                <div className="counter-wrapper mb-30">
+                  <div className="counter-icon">
+                    <span className="plus">+</span>
+                    <div className="counter-text">
+                      <CountUp end={0} />
+                      <span className="textCounter">Conservantes</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="about-area pos-relative pt-70">
+        <div className="container">
+          <div className="row">
             <div className="col-12 mb-5">
               <div className="about-2-wrapper text-center">
                 <div className="section-title section-title-cap mb-2">
-                  <h3>Bem-vindo à Academia Industrial</h3>
-                  <p>Academia Industrial Waku, é um Centro de Formação virado ao agronegócio, que se destaca como uma referência no ensino e na formação de profissionais capacitados, para o setor agro e pecúario em Angola</p>
+                  <h3>Quem Somos</h3>
+                  <p>O Grupo Esperança Trading, Lda é uma empresa angolana de transformação alimentar, comprometida com o desenvolvimento industrial e a promoção da saúde através da alimentação. Detentora das marcas Toto Drink e Toto Food, a empresa actua na produção de sumos naturais sem conservantes e alimentos africanos tradicionais, valorizando os produtos da terra e impulsionando o consumo orgânico em Angola e além-fronteiras.</p>
+                  <p><strong>Da terra angolana para a sua mesa</strong> — Cada produto nasce do compromisso com a terra, com os agricultores locais e com a saúde de quem nos escolhe. Produzimos com respeito pela origem natural dos ingredientes, sem aditivos químicos e sem conservantes.</p>
                 </div>
                 <Link className="btn" to="/sobre">Saiba Mais</Link>
               </div>
@@ -106,111 +153,116 @@ export default function HomePage() {
         </div>
       </div>
 
-      <div className="video-area pt-4 pb-4 mt-2" style={{ backgroundImage: 'url(/img/files/1920-x-905.png)' }}>
-        <div className="container">
-          <div className="row">
-            <div className="col-xl-10 col-lg-10 offset-lg-1 offset-xl-1">
-              <div className="video-wrapper text-center mb-3">
-                <div className="video-text">
-                  <h1 style={{ fontSize: '25px' }}>Somos o Melhor Lugar para Criares a Sua Marca.</h1>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="counter-bg pt-70 pb-50" style={{ backgroundColor: '#00000059' }}>
-            <div className="row justify-content-around">
-              <div className="col-xl-3 col-lg-3 col-md-3">
-                <div className="counter-wrapper mb-30">
-                  <div className="counter-icon">
-                    <span className="plus">+</span>
-                    <div className="counter-text">
-                      <CountUp end={1102} />
-                      <span className="textCounter">Formados</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-xl-3 col-lg-3 col-md-3">
-                <div className="counter-wrapper mb-30">
-                  <div className="counter-icon">
-                    <span className="plus">+</span>
-                    <div className="counter-text">
-                      <CountUp end={116} />
-                      <span className="textCounter">Projetos</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="pricing-area grey1-bg pt-70">
+      <div className="service-area pt-70 pb-70" style={{ backgroundImage: 'url(/img/bg/bg16.jpg)' }}>
         <div className="container">
           <div className="row">
             <div className="col-md-8 mx-auto">
               <div className="section-title section-title-cap text-center mb-5">
-                <h1>Formações</h1>
-                <p>Na Academia Industrial, transformamos conhecimento em oportunidades. Oferecemos formações completas e práticas no universo do agronegócio, capacitando você desde os fundamentos teóricos até a aplicação prática no campo. Aqui, ajudamos a projetar seus sonhos e a executá-los com excelência.</p>
+                <h1>As Nossas Marcas</h1>
+                <p>Três marcas, um compromisso: levar o melhor da terra angolana até si</p>
               </div>
             </div>
           </div>
           <div className="row">
-            {courses.map((course) => (
-              <div key={course.id} className="col-md-4">
-                <div className="card course-card">
-                  <div className="course-image" style={{ backgroundImage: `url('${course.image}')` }}>
-                    <div className="course-overlay"></div>
-                    <div className="course-title">{course.title}</div>
-                  </div>
-                  <div className="course-details">
-                    <div className="mb-2"><i className="fas fa-map-marker-alt"></i> {course.type}</div>
-                    <div className="mb-2"><i className="fas fa-clock"></i> {course.hours}</div>
-                    <div className="mb-2"><i className="fas fa-calendar"></i> {course.duration}</div>
-                    <div className="d-flex justify-content-between align-items-center mt-4">
-                      <span className="rating">★ {course.rating}</span>
-                      <div className="text-right">
-                        <div className="old-price">De {course.oldPrice}</div>
-                        <div className="new-price">Para {course.newPrice}</div>
-                        <div className="installment">{course.installment}</div>
-                      </div>
-                    </div>
-                    <Link to={`/formacoes/${course.id}`} className="btn btn-inscreva mt-3">Inscreva-se</Link>
-                  </div>
+            <div className="col-md-4 mb-4">
+              <div className="text-center p-4" style={{ background: '#fff', borderRadius: 10, height: '100%' }}>
+                <div style={{ fontSize: 50, color: '#4caf50', marginBottom: 15 }}>
+                  <i className="fas fa-leaf"></i>
                 </div>
+                <h4>Toto Drink</h4>
+                <p style={{ fontStyle: 'italic' }}>Sumos naturais, 100% orgânicos, sem conservantes</p>
+                <p>Produzidos a partir de frutas locais cuidadosamente seleccionadas, os sumos Toto Drink trazem o sabor genuíno de Angola directamente para a sua mesa.</p>
+                <Link className="btn" to="/marcas">Saber Mais</Link>
               </div>
-            ))}
+            </div>
+            <div className="col-md-4 mb-4">
+              <div className="text-center p-4" style={{ background: '#fff', borderRadius: 10, height: '100%' }}>
+                <div style={{ fontSize: 50, color: '#8d6e63', marginBottom: 15 }}>
+                  <i className="fas fa-utensils"></i>
+                </div>
+                <h4>Toto Food</h4>
+                <p style={{ fontStyle: 'italic' }}>Linha alimentar tradicional africana</p>
+                <p>Uma linha centrada em pratos e conservas típicas africanas, que preserva o sabor autêntico e as características nutricionais dos alimentos angolanos.</p>
+                <Link className="btn" to="/marcas">Saber Mais</Link>
+              </div>
+            </div>
+            <div className="col-md-4 mb-4">
+              <div className="text-center p-4" style={{ background: '#fff', borderRadius: 10, height: '100%' }}>
+                <div style={{ fontSize: 50, color: '#ff7043', marginBottom: 15 }}>
+                  <i className="fas fa-drumstick-bite"></i>
+                </div>
+                <h4>Frango Premium</h4>
+                <p style={{ fontStyle: 'italic' }}>Frango grelhado e assado, com acompanhamentos típicos</p>
+                <p>Frango grelhado ou assado, servido com kiquanga, banana-pão frita ou batata — qualidade premium ao sabor tradicional angolano.</p>
+                <Link className="btn" to="/marcas">Saber Mais</Link>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      <div className="service-area pt-70" style={{ backgroundImage: 'url(/img/bg/bg16.jpg)' }}>
+      <div className="product-area pos-relative pt-70 pb-70">
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <div className="section-title section-title-cap text-center mb-5">
+                <h1>Porque Nos Escolher</h1>
+              </div>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-md-3 mb-4">
+              <div className="text-center p-3">
+                <div style={{ fontSize: 40, color: '#4caf50', marginBottom: 10 }}>
+                  <i className="fas fa-globe-africa"></i>
+                </div>
+                <h5>100% Origem Angolana</h5>
+                <p>Ingredientes colhidos directamente da terra angolana, valorizando produtores e tradições locais.</p>
+              </div>
+            </div>
+            <div className="col-md-3 mb-4">
+              <div className="text-center p-3">
+                <div style={{ fontSize: 40, color: '#4caf50', marginBottom: 10 }}>
+                  <i className="fas fa-ban"></i>
+                </div>
+                <h5>Sem Conservantes</h5>
+                <p>Produção natural, sem aditivos químicos, preservando o sabor genuíno e os benefícios nutricionais.</p>
+              </div>
+            </div>
+            <div className="col-md-3 mb-4">
+              <div className="text-center p-3">
+                <div style={{ fontSize: 40, color: '#4caf50', marginBottom: 10 }}>
+                  <i className="fas fa-truck"></i>
+                </div>
+                <h5>Entrega à Sua Porta</h5>
+                <p>Faça a sua encomenda e receba directamente em casa, com rapidez e confiança.</p>
+              </div>
+            </div>
+            <div className="col-md-3 mb-4">
+              <div className="text-center p-3">
+                <div style={{ fontSize: 40, color: '#4caf50', marginBottom: 10 }}>
+                  <i className="fas fa-shopping-cart"></i>
+                </div>
+                <h5>Compra Online Facilitada</h5>
+                <p>Realize a sua compra directamente nas nossas plataformas digitais, de forma simples e segura.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="service-area pt-70 pb-70" style={{ backgroundImage: 'url(/img/bg/bg16.jpg)' }}>
         <div className="container">
           <div className="row">
             <div className="col-md-8 mx-auto">
               <div className="section-title section-title-cap text-center mb-5">
-                <h1>Pulvieto</h1>
-                <p>O Projecto Pulvieto, uma iniciativa integrada à Academia Industrial, oferece serviços especializados no setor agropecuário</p>
-              </div>
-            </div>
-          </div>
-          <ServicesCarousel />
-        </div>
-      </div>
-
-      <div className="product-area pos-relative pt-5">
-        <div className="container">
-          <div className="row">
-            <div className="col-xl-6 col-lg-6 offset-lg-3 offset-xl-3">
-              <div className="section-title section-title-cap text-center mb-3">
                 <h1>Nossos Produtos</h1>
-                <p>Dê uma olhada na nossa loja!</p>
+                <p>Conheça a nossa linha de produtos naturais</p>
               </div>
             </div>
           </div>
           <div className="row">
-            {products.racao.slice(0, 4).map((product, i) => (
+            {products.sumo_natural.slice(0, 4).map((product, i) => (
               <div key={i} className="col-xl-3 col-lg-3 col-md-6">
                 <div className="product-wrapper text-center mb-30">
                   <div className="product-img">
@@ -236,6 +288,18 @@ export default function HomePage() {
         </div>
       </div>
 
+      <div className="about-area pos-relative pt-70 pb-70">
+        <div className="container">
+          <div className="row">
+            <div className="col-12 text-center">
+              <h2>Faça já a sua encomenda</h2>
+              <p className="mb-4" style={{ fontSize: 18 }}>Da terra angolana para a sua mesa — produtos naturais, frescos e feitos com cuidado.</p>
+              <Link className="btn" to="/contacto">Encomendar Agora</Link>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div className="brand-area pt-5">
         <div className="container">
           <div className="brand-bg pb-50">
@@ -248,15 +312,12 @@ export default function HomePage() {
                   <a href="#" target="_blank"><i className="fab fa-facebook-f"></i></a>
                   <a href="#" target="_blank"><i className="fab fa-instagram"></i></a>
                   <a href="#" target="_blank"><i className="fab fa-whatsapp"></i></a>
-                  <a href="https://www.youtube.com/channel/UC9jScpWkVi5gBsxVzh6fkfQ" target="_blank"><i className="fab fa-youtube"></i></a>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-
-      <YouTubeSection />
     </>
   )
 }
@@ -299,53 +360,6 @@ function CountUp({ end }) {
   return <h1 className="counter textCounter" ref={ref}>{count}</h1>
 }
 
-function ServicesCarousel() {
-  const swiperRef = useRef(null)
-
-  useEffect(() => {
-    import('swiper/bundle').then(({ default: Swiper }) => {
-      import('swiper/css/bundle')
-      if (swiperRef.current) {
-        new Swiper(swiperRef.current, {
-          loop: true,
-          slidesPerView: 1,
-          spaceBetween: 30,
-          navigation: true,
-          pagination: true,
-          autoplay: true,
-          breakpoints: {
-            768: { slidesPerView: 2 },
-            992: { slidesPerView: 3 },
-          },
-        })
-      }
-    })
-  }, [])
-
-  return (
-    <div className="row">
-      <div className="swiper" ref={swiperRef}>
-        <div className="swiper-wrapper">
-          {services.map((service) => (
-            <div key={service.id} className="swiper-slide">
-              <div className="service-wrapper text-center mb-30">
-                <div className="service-img">
-                  <img src={service.image} style={{ width: '200px', borderRadius: '50%' }} alt="" />
-                  <span className="service-tag">{service.tag}</span>
-                </div>
-                <div className="service-text">
-                  <h4>{service.title}</h4>
-                  <Link className="btn" to={`/pulvieto/${service.id}`}>Saiba Mais</Link>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  )
-}
-
 function BrandsCarousel() {
   const swiperRef = useRef(null)
 
@@ -370,80 +384,14 @@ function BrandsCarousel() {
     <div className="brand-wrapper">
       <div className="swiper" ref={swiperRef}>
         <div className="swiper-wrapper">
-          {[1, 2, 3, 4, 5].map((i) => (
+          {['Toto Drink', 'Toto Food', 'Frango Premium'].map((name, i) => (
             <div key={i} className="swiper-slide">
               <div className="brand-img text-center">
-                <img src="/img/brand/brand1.png" alt="" />
+                <h3 style={{ padding: '40px 0', color: '#333' }}>{name}</h3>
               </div>
             </div>
           ))}
         </div>
-      </div>
-    </div>
-  )
-}
-
-function YouTubeSection() {
-  const [playerReady, setPlayerReady] = useState(false)
-  const playerRef = useRef(null)
-  const containerRef = useRef(null)
-
-  useEffect(() => {
-    const apiKey = 'REVOKED'
-    const channelId = 'UC9jScpWkVi5gBsxVzh6fkfQ'
-    let player = null
-    let videos = []
-    let currentVideoIndex = 0
-
-    async function fetchVideos() {
-      const url = `https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelId}&part=snippet,id&order=date&maxResults=50`
-      const response = await fetch(url)
-      const data = await response.json()
-      return data.items.filter(item => item.id.videoId).map(item => item.id.videoId)
-    }
-
-    async function initPlayer() {
-      videos = await fetchVideos()
-      if (!containerRef.current || videos.length === 0) return
-      player = new window.YT.Player(containerRef.current, {
-        videoId: videos[currentVideoIndex],
-        playerVars: { autoplay: 1, controls: 1, rel: 0 },
-        events: {
-          onReady: (event) => { event.target.playVideo(); setPlayerReady(true) },
-          onStateChange: (event) => {
-            if (event.data === window.YT.PlayerState.ENDED) {
-              currentVideoIndex = (currentVideoIndex + 1) % videos.length
-              player.loadVideoById(videos[currentVideoIndex])
-            }
-          },
-        },
-      })
-    }
-
-    if (!window.YT) {
-      const tag = document.createElement('script')
-      tag.src = 'https://www.youtube.com/iframe_api'
-      tag.onload = () => { window.onYouTubeIframeAPIReady = initPlayer }
-      document.body.appendChild(tag)
-    } else {
-      initPlayer()
-    }
-
-    return () => {
-      player?.destroy()
-    }
-  }, [])
-
-  return (
-    <div className="row mb-5 mx-auto d-none" style={{ maxWidth: '100%' }}>
-      <div className="container mx-auto">
-        <div
-          ref={containerRef}
-          id="playerHide"
-          allow="autoplay"
-          allowFullScreen
-          style={{ border: '1px solid black', margin: '0 auto', padding: 0 }}
-        ></div>
       </div>
     </div>
   )

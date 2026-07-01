@@ -11,7 +11,7 @@ export default function Footer() {
             <div className="col-xl-4 col-lg-4 col-md-6">
               <div className="footer-wrapper mb-30">
                 <div className="footer-title">
-                  <h4>Sobre</h4>
+                  <h4>Grupo Esperança Trading</h4>
                 </div>
                 <ul className="footer-address">
                   <li>
@@ -32,33 +32,28 @@ export default function Footer() {
             <div className="col-xl-4 col-lg-4 col-md-6">
               <div className="footer-wrapper pl-45 mb-30">
                 <div className="footer-title">
-                  <h4>Serviços</h4>
+                  <h4>As Nossas Marcas</h4>
                 </div>
                 <ul className="fotter-list">
-                  <li><h5><a href="#">Consultoria Agrária e Pecuária</a></h5></li>
-                  <li><h5><a href="#">Consultoria em Psicultura</a></h5></li>
-                  <li><h5><a href="#">Gestão de Projetos Agrícolas</a></h5></li>
-                  <li><h5><a href="#">Assistência Técnica</a></h5></li>
-                  <li><h5><a href="#">Marketing Rural</a></h5></li>
-                  <li><h5><a href="#">Venda de Materiais</a></h5></li>
+                  <li><h5><Link to="/marcas">Toto Drink — Sumos Naturais</Link></h5></li>
+                  <li><h5><Link to="/marcas">Toto Food — Linha Tradicional</Link></h5></li>
+                  <li><h5><Link to="/marcas">Frango Premium</Link></h5></li>
+                  <li><h5><Link to="/loja">Loja Online</Link></h5></li>
                 </ul>
               </div>
             </div>
             <div className="col-xl-4 col-lg-4 col-md-6">
               <div className="footer-wrapper pl-45 mb-30">
                 <div className="footer-title">
-                  <h4>Formações</h4>
+                  <h4>Serviços</h4>
                 </div>
                 <ul className="foter-list">
-                  <li><h5><a href="#">Agricultura Orgânica</a></h5></li>
-                  <li><h5><a href="#">Avicultura</a></h5></li>
-                  <li><h5><a href="#">Suinicultura</a></h5></li>
-                  <li><h5><a href="#">Caprinocultura</a></h5></li>
-                  <li><h5><a href="#">Agronegócios</a></h5></li>
-                  <li><h5><a href="#">Agropecuária</a></h5></li>
-                  <li><h5><a href="#">Produção de Ração</a></h5></li>
-                  <li><h5><a href="#">Produção de Sabão e Perfume</a></h5></li>
-                  <li><h5><a href="#">Marketing Rural</a></h5></li>
+                  <li><h5><Link to="/marcas">Sumo Natural Sem Conservantes</Link></h5></li>
+                  <li><h5><Link to="/marcas">Linha Detox & Energéticos</Link></h5></li>
+                  <li><h5><Link to="/marcas">Legumes Congelados</Link></h5></li>
+                  <li><h5><Link to="/marcas">Quitutes Engarrafados</Link></h5></li>
+                  <li><h5><Link to="/marcas">Frango Premium</Link></h5></li>
+                  <li><h5><Link to="/marcas">Serviço para Eventos</Link></h5></li>
                 </ul>
               </div>
             </div>
@@ -67,7 +62,7 @@ export default function Footer() {
             <div className="row">
               <div className="col-xl-12 text-center">
                 <div className="copyright">
-                  <p> Copyright <i className="far fa-copyright"></i> {year} <a href="#">Academia Industrial</a> <br />Todos os Direitos Reservados <br /> Desenvolvido por <a href="https://caxinda.com" target="_blank">Caxinda Divulga</a> </p>
+                  <p> Copyright <i className="far fa-copyright"></i> {year} <a href="#">Grupo Esperança Trading, Lda</a> <br />Todos os Direitos Reservados <br /> Desenvolvido por <a href="https://caxinda.com" target="_blank">Caxinda Divulga</a> </p>
                 </div>
               </div>
             </div>

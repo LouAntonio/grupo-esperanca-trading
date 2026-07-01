@@ -11,8 +11,8 @@ export default function AboutPage() {
                 <div className="col-xl-10 offset-xl-1">
                   <div className="slider-content text-center">
                     <div className="slider-video-icon"></div>
-                    <h1 data-animation="fadeInUp" data-delay=".5s">Academia Industrial</h1>
-                    <h3 data-animation="fadeInUp" data-delay=".7s" style={{ color: '#242424', fontWeight: 'bold' }}>Saiba Mais Sobre Nós!</h3>
+                    <h1 data-animation="fadeInUp" data-delay=".5s">Grupo Esperança Trading, Lda</h1>
+                    <h3 data-animation="fadeInUp" data-delay=".7s" style={{ color: '#242424', fontWeight: 'bold' }}>Da terra angolana para a sua mesa</h3>
                   </div>
                 </div>
               </div>
@@ -32,12 +32,12 @@ export default function AboutPage() {
             <div className="col-xl-6 col-lg-6">
               <div className="about-wrapper about-2-wrapper">
                 <div className="section-title section-title-cap mb-35">
-                  <h3>Bem-vindo à Academia Industrial</h3>
-                  <p>Academia Industrial Waku, é um Centro de Formação virado ao agronegócio, que se destaca como uma referência no ensino e na formação de profissionais capacitados, para o setor agro e pecúario em Angola</p>
-                  <p>Desde 2019, a Academia Industrial Waku tem-se afirmado como uma referência no mercado angolano, promovendo iniciativas inovadoras no setor agro e pecuário. Um dos nossos maiores marcos é o "Projecto Coelho Angola", que se destacou pela realização da maior conferência sobre criação de coelhos em Angola. Este evento, realizado a 5 de maio de 2022, reuniu importantes órgãos institucionais e especialistas do setor, consolidando o nosso compromisso com o desenvolvimento do agronegócio e da agropecuária no país.</p>
-                  <p>O <b>Projecto Coelho Angola</b> não apenas fortaleceu o setor agropecuário, mas também abriu novas perspetivas para as famílias angolanas, oferecendo-lhes a oportunidade de gerar rendimentos sustentáveis a partir das suas próprias casas. Esta iniciativa reflete o nosso objetivo de transformar vidas através de soluções acessíveis, sustentáveis e inovadoras, contribuindo para o crescimento económico e social de Angola.</p>
+                  <h3>Quem Somos</h3>
+                  <p>O Grupo Esperança Trading, Lda é uma empresa angolana de transformação alimentar, comprometida com o desenvolvimento industrial e a promoção da saúde através da alimentação. Detentora das marcas Toto Drink e Toto Food, a empresa actua na produção de sumos naturais sem conservantes e alimentos africanos tradicionais, valorizando os produtos da terra e impulsionando o consumo orgânico em Angola e além-fronteiras.</p>
+                  <p><strong>Da terra angolana para a sua mesa</strong></p>
+                  <p>Cada produto nasce do compromisso com a terra, com os agricultores locais e com a saúde de quem nos escolhe. Produzimos com respeito pela origem natural dos ingredientes, sem aditivos químicos e sem conservantes.</p>
                 </div>
-                <Link className="btn" to="/contacto">Fale Connosco</Link>
+                <Link className="btn" to="/marcas">Conheça as Nossas Marcas</Link>
               </div>
             </div>
           </div>
@@ -49,8 +49,7 @@ export default function AboutPage() {
           <div className="row">
             <div className="col-xl-8 col-lg-8 mx-auto">
               <div className="section-title text-center section-title-cap mb-90">
-                <h1>Sobre Nós</h1>
-                <p>Somos um centro de formação profissional dedicado a capacitar jovens empreendedores e profissionais nas áreas de Agro e Pecuária. Com uma abordagem prática e inovadora, promovemos soluções sustentáveis e geramos impacto positivo no mercado de trabalho e na economia local.</p>
+                <h1>Missão & Visão</h1>
               </div>
             </div>
           </div>
@@ -62,7 +61,7 @@ export default function AboutPage() {
                 </div>
                 <div className="we-works-text">
                   <h3>Missão</h3>
-                  <p>Capacitar profissionais nas áreas de Agro e Pecuária, promovendo competências técnicas, práticas e empreendedoras, e contribuindo para o crescimento sustentável das empresas e a valorização no setor do agronegócios.</p>
+                  <p>Promover a boa saúde através de uma alimentação saudável, investindo na indústria alimentar orgânica e na transformação de produtos sem aditivos químicos.</p>
                 </div>
               </div>
             </div>
@@ -73,18 +72,65 @@ export default function AboutPage() {
                 </div>
                 <div className="we-works-text">
                   <h3>Visão</h3>
-                  <p>Ser reconhecido como o principal centro de formação profissional no sector do agronegócios em Angola, formando profissionais altamente qualificados e promovendo soluções inovadoras e sustentáveis para o mercado.</p>
+                  <p>Transformar Angola e África em referências industriais, capazes de combater a insuficiência alimentar e reduzir a pobreza extrema, formando jovens em transformação, conservação e certificação de produtos locais.</p>
                 </div>
               </div>
             </div>
-            <div className="col-xl-4 col-lg-4 col-md-6">
-              <div className="we-works-wrapper text-center mb-30">
-                <div className="we-works-icon">
-                  <img src="/img/icon/w3.png" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div className="about-area pos-relative pt-70 pb-70">
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <div className="section-title text-center section-title-cap mb-5">
+                <h1>Valores e Objectivos</h1>
+              </div>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-md-6 mb-4">
+              <div className="d-flex align-items-start p-4" style={{ background: '#f9f9f9', borderRadius: 10, height: '100%' }}>
+                <div style={{ fontSize: 30, color: '#4caf50', marginRight: 15 }}>
+                  <i className="fas fa-seedling"></i>
                 </div>
-                <div className="we-works-text">
-                  <h3>Valores</h3>
-                  <p>Trabalhamos com dedicação para promover qualidade, responsabilidade ambiental, desenvolvimento social e soluções práticas para transformar o setor do agronegócio.</p>
+                <div>
+                  <h5>Fomentar o espírito empreendedor jovem</h5>
+                  <p className="mb-0">Acreditamos no potencial da juventude angolana como motor de transformação do sector alimentar.</p>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-6 mb-4">
+              <div className="d-flex align-items-start p-4" style={{ background: '#f9f9f9', borderRadius: 10, height: '100%' }}>
+                <div style={{ fontSize: 30, color: '#4caf50', marginRight: 15 }}>
+                  <i className="fas fa-industry"></i>
+                </div>
+                <div>
+                  <h5>Criar pequenas e médias indústrias locais sustentáveis</h5>
+                  <p className="mb-0">Impulsionar o desenvolvimento industrial local com modelos de negócio sustentáveis e replicáveis.</p>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-6 mb-4">
+              <div className="d-flex align-items-start p-4" style={{ background: '#f9f9f9', borderRadius: 10, height: '100%' }}>
+                <div style={{ fontSize: 30, color: '#4caf50', marginRight: 15 }}>
+                  <i className="fas fa-users"></i>
+                </div>
+                <div>
+                  <h5>Reduzir o êxodo juvenil</h5>
+                  <p className="mb-0">Gerar emprego e capacitação técnica para fixar os jovens nas suas comunidades de origem.</p>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-6 mb-4">
+              <div className="d-flex align-items-start p-4" style={{ background: '#f9f9f9', borderRadius: 10, height: '100%' }}>
+                <div style={{ fontSize: 30, color: '#4caf50', marginRight: 15 }}>
+                  <i className="fas fa-chart-line"></i>
+                </div>
+                <div>
+                  <h5>Contribuir para o crescimento económico e social</h5>
+                  <p className="mb-0">Gerar impacto positivo em Angola e em África através da produção alimentar de qualidade.</p>
                 </div>
               </div>
             </div>

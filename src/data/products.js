@@ -1,25 +1,33 @@
 const products = {
-  racao: [
-    { name: 'Campeão Adulto 20 kg', image: '/img/product/CAMPEÃO-ADULTO-20-KG.png', price: 'akz 10.000,00' },
-    { name: 'Campeão Júnior 20 kg', image: '/img/product/CAMPEÃO-JR-20-KG.png', price: 'akz 13.000,00' },
-    { name: 'Domus Adulto 20 kg', image: '/img/product/DOMUS-adulto-20-kg.png', price: 'akz 10.000,00' },
-    { name: 'Domus Alto Energia 20 kg', image: '/img/product/DOMUS-ALTA-ENERGIA-20-KG.png', price: 'akz 13.000,00' },
-    { name: 'Domus Júnior 20 kg', image: '/img/product/DOMUS-JR-20KH.png', price: 'akz 13.000,00' },
-    { name: 'Rufia Adulto 20 kg', image: '/img/product/RUFIA-ALTA-ENERGIA-20-KG.png', price: 'akz 13.000,00' },
-    { name: 'Rufia Júnior 20 kg', image: '/img/product/RUFIA-JUNIOR-20-KG.png', price: 'akz 12.000,00' },
-    { name: 'Rufia Adulto Mista 20 kg', image: '/img/product/RUFIA-ADULTO-MIX.png', price: 'akz 10.000,00' },
+  sumo_natural: [
+    { name: 'Sumo Natural de Manga', image: '/img/product/sumo-manga.png', price: 'akz 500,00' },
+    { name: 'Sumo Natural de Maracujá', image: '/img/product/sumo-maracuja.png', price: 'akz 500,00' },
+    { name: 'Sumo Natural de Ananás', image: '/img/product/sumo-ananas.png', price: 'akz 500,00' },
+    { name: 'Sumo Natural de Goiaba', image: '/img/product/sumo-goiaba.png', price: 'akz 500,00' },
+    { name: 'Sumo Natural de Laranja', image: '/img/product/sumo-laranja.png', price: 'akz 500,00' },
   ],
-  medicamento: [
-    { name: 'Nex Gard 2-4 kg', image: '/img/product/NEXGARD-2-4.png', price: 'akz 8.500,00' },
-    { name: 'Nex Gard 4,1-10 kg', image: '/img/product/NEXGARD-4-10.png', price: 'akz 10.000,00' },
-    { name: 'Nex Gard 10,1-25 kg', image: '/img/product/NEXGARD-10-25.png', price: 'akz 13.000,00' },
-    { name: 'Nex Gard 25,1-50 kg', image: '/img/product/NEXGARD-20-50.png', price: 'akz 15.000,00' },
+  detox: [
+    { name: 'Sumo Detox Verde', image: '/img/product/detox-verde.png', price: 'akz 600,00' },
+    { name: 'Sumo Detox Vermelho', image: '/img/product/detox-vermelho.png', price: 'akz 600,00' },
+    { name: 'Sumo Energético Natural', image: '/img/product/energetico.png', price: 'akz 650,00' },
   ],
-  diversos: [],
-  legumes: [],
-  animais: [],
-  materiais: [],
-  maquinas: [],
+  legumes_congelados: [
+    { name: 'Ervilha Congelada', image: '/img/product/ervilha.png', price: 'akz 400,00' },
+    { name: 'Quiabo Congelado', image: '/img/product/quiabo.png', price: 'akz 400,00' },
+    { name: 'Fumbua Congelado', image: '/img/product/fumbua.png', price: 'akz 450,00' },
+    { name: 'Kizaca Congelada', image: '/img/product/kizaca.png', price: 'akz 450,00' },
+  ],
+  quitutes: [
+    { name: 'Gindungo em Pó', image: '/img/product/gindungo-po.png', price: 'akz 300,00' },
+    { name: 'Jindungo Preparado', image: '/img/product/jindungo.png', price: 'akz 350,00' },
+    { name: 'Piri-piri Tradicional', image: '/img/product/piripiri.png', price: 'akz 350,00' },
+  ],
+  frango_premium: [
+    { name: 'Frango Grelhado com Kiquanga', image: '/img/product/frango-kiquanga.png', price: 'akz 2.500,00' },
+    { name: 'Frango Assado com Banana-pão', image: '/img/product/frango-banana.png', price: 'akz 2.500,00' },
+    { name: 'Frango Grelhado com Batata', image: '/img/product/frango-batata.png', price: 'akz 2.200,00' },
+    { name: 'Meio Frango Grelhado', image: '/img/product/meio-frango.png', price: 'akz 1.500,00' },
+  ],
 }
 
 export default products

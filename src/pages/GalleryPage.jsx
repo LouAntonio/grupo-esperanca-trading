@@ -3,18 +3,18 @@ import Lightbox from 'yet-another-react-lightbox'
 import 'yet-another-react-lightbox/styles.css'
 
 const galleryImages = [
-  { src: '/img/gallery/gallery1.jpg', alt: 'gallery 1', cat: 'cat2' },
-  { src: '/img/gallery/gallery2.jpg', alt: 'gallery 2', cat: 'cat3' },
-  { src: '/img/gallery/gallery3.jpg', alt: 'gallery 3', cat: 'cat2' },
-  { src: '/img/gallery/gallery4.jpg', alt: 'gallery 4', cat: 'cat2' },
-  { src: '/img/gallery/gallery5.jpg', alt: 'gallery 5', cat: 'cat3' },
-  { src: '/img/gallery/gallery6.jpg', alt: 'gallery 6', cat: 'cat3' },
+  { src: '/img/gallery/gallery1.jpg', alt: 'Produtos Toto Drink', cat: 'cat2' },
+  { src: '/img/gallery/gallery2.jpg', alt: 'Frango Premium', cat: 'cat3' },
+  { src: '/img/gallery/gallery3.jpg', alt: 'Sumos Naturais', cat: 'cat2' },
+  { src: '/img/gallery/gallery4.jpg', alt: 'Legumes Congelados', cat: 'cat2' },
+  { src: '/img/gallery/gallery5.jpg', alt: 'Eventos', cat: 'cat3' },
+  { src: '/img/gallery/gallery6.jpg', alt: 'Quitutes', cat: 'cat3' },
 ]
 
 const filters = [
   { key: '*', label: 'Todas' },
-  { key: 'cat2', label: 'Eventos' },
-  { key: 'cat3', label: 'Formações' },
+  { key: 'cat2', label: 'Produtos' },
+  { key: 'cat3', label: 'Eventos' },
 ]
 
 export default function GalleryPage() {
@@ -48,8 +48,8 @@ export default function GalleryPage() {
           <div className="row">
             <div className="col-xl-6 col-lg-6 offset-lg-3 offset-xl-3">
               <div className="section-title text-center mb-65">
-                <h1>Nossa galeria</h1>
-                <p>Veja imagens de nossos eventos, notícias, e muito mais...</p>
+                <h1>A nossa galeria</h1>
+                <p>Veja imagens dos nossos produtos, eventos e muito mais...</p>
               </div>
             </div>
           </div>
@@ -84,8 +84,8 @@ export default function GalleryPage() {
                       <img src={img.src} alt={img.alt} />
                     </a>
                     <div className="gallery-text">
-                      <span>Organic Food</span>
-                      <h3><a href="#">special meat</a></h3>
+                      <span>Grupo Esperança Trading</span>
+                      <h3><a href="#">{img.alt}</a></h3>
                     </div>
                   </div>
                 </div>

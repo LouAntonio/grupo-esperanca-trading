@@ -2,17 +2,15 @@ import { useState } from 'react'
 import products from '../data/products'
 
 const tabs = [
-  { key: 'diversos', label: 'Diversos' },
-  { key: 'legumes', label: 'Legumes' },
-  { key: 'animais', label: 'Animais' },
-  { key: 'racao', label: 'Ração' },
-  { key: 'medicamento', label: 'Medicamentos' },
-  { key: 'materiais', label: 'Materiais' },
-  { key: 'maquinas', label: 'Máquinas' },
+  { key: 'sumo_natural', label: 'Sumo Natural' },
+  { key: 'detox', label: 'Detox & Energéticos' },
+  { key: 'legumes_congelados', label: 'Legumes Congelados' },
+  { key: 'quitutes', label: 'Quitutes' },
+  { key: 'frango_premium', label: 'Frango Premium' },
 ]
 
 export default function StorePage() {
-  const [activeTab, setActiveTab] = useState('racao')
+  const [activeTab, setActiveTab] = useState('sumo_natural')
 
   return (
     <>
@@ -34,6 +32,14 @@ export default function StorePage() {
 
       <div className="product-area pos-relative pt-110 pb-120 fix">
         <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <div className="section-title section-title-cap text-center mb-5">
+                <h2>Os Nossos Produtos</h2>
+                <p>Produtos naturais, frescos e feitos com cuidado — da terra angolana para a sua mesa</p>
+              </div>
+            </div>
+          </div>
           <div className="row">
             <div className="col-12">
               <ul className="nav nav-tabs" id="productTab" role="tablist">

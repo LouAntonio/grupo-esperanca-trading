@@ -31,7 +31,7 @@ export default function Header() {
           <div className="row">
             <div className="col-xl-3 col-lg-3 d-flex align-items-center">
               <div className="logo">
-                <Link to="/"><img src="/img/files/logo-small.png" width="200" alt="" /></Link>
+                <Link to="/"><img src="/img/logo/newLogo.png" width="200" alt="Grupo Esperança Trading" /></Link>
               </div>
             </div>
             <div className="col-xl-9 col-lg-9 row" style={{ justifyContent: 'end', alignItems: 'center' }}>
@@ -40,10 +40,9 @@ export default function Header() {
                   <ul>
                     <li><Link to="/">home</Link></li>
                     <li><Link to="/sobre">Sobre</Link></li>
-                    <li><Link to="/formacoes">Formações</Link></li>
-                    <li><Link to="/pulvieto">Pulvieto</Link></li>
-                    <li><Link to="/galeria">Galeria</Link></li>
+                    <li><Link to="/marcas">Marcas</Link></li>
                     <li><Link to="/loja">Loja</Link></li>
+                    <li><Link to="/galeria">Galeria</Link></li>
                     <li><Link to="/contacto">contacto</Link></li>
                   </ul>
                 </nav>
