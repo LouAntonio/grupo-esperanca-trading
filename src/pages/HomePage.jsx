@@ -28,7 +28,13 @@ function MarqueeRow({ images, speed = 0.6, dir }) {
 		const track = trackRef.current;
 		if (!track || track.scrollWidth === 0) return;
 		setWidthRef.current = track.scrollWidth / 3;
-		readyRef.current = true;
+		if (setWidthRef.current > 10) {
+			readyRef.current = true;
+			if (dir === 'right') {
+				posRef.current = -setWidthRef.current;
+				track.style.transform = `translateX(${posRef.current}px)`;
+			}
+		}
 	}, []);
 
 	useEffect(() => {
@@ -39,7 +45,10 @@ function MarqueeRow({ images, speed = 0.6, dir }) {
 			count++;
 			if (count === imgs.length) measure();
 		};
-		imgs.forEach((img) => (img.complete ? check() : (img.onload = check)));
+		imgs.forEach((img) => {
+			img.onerror = check;
+			img.complete ? check() : (img.onload = check);
+		});
 	}, [measure]);
 
 	useEffect(() => {
@@ -51,7 +60,7 @@ function MarqueeRow({ images, speed = 0.6, dir }) {
 				if (posRef.current <= -sw) posRef.current = 0;
 			} else {
 				posRef.current += speed;
-				if (posRef.current >= sw) posRef.current = 0;
+				if (posRef.current >= 0) posRef.current = -sw;
 			}
 				trackRef.current.style.transform = `translateX(${posRef.current}px)`;
 			}
