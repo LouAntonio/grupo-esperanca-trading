@@ -1,0 +1,58 @@
+import { useState, useEffect, useRef } from 'react'
+import { Link, useLocation } from 'react-router-dom'
+
+export default function Header() {
+  const location = useLocation()
+  const headerRef = useRef(null)
+  const [mobileOpen, setMobileOpen] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const el = headerRef.current
+      if (!el) return
+      if (window.scrollY < 100) {
+        el.classList.remove('sticky')
+      } else {
+        el.classList.add('sticky')
+      }
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  useEffect(() => {
+    setMobileOpen(false)
+  }, [location])
+
+  return (
+    <header className="header-transparent">
+      <div ref={headerRef} id="sticky-header" className="main-menu-area mt-20">
+        <div className="container">
+          <div className="row">
+            <div className="col-xl-3 col-lg-3 d-flex align-items-center">
+              <div className="logo">
+                <Link to="/"><img src="/img/files/logo-small.png" width="200" alt="" /></Link>
+              </div>
+            </div>
+            <div className="col-xl-9 col-lg-9 row" style={{ justifyContent: 'end', alignItems: 'center' }}>
+              <div className="main-menu">
+                <nav id="mobile-menu">
+                  <ul>
+                    <li><Link to="/">home</Link></li>
+                    <li><Link to="/sobre">Sobre</Link></li>
+                    <li><Link to="/formacoes">Formações</Link></li>
+                    <li><Link to="/pulvieto">Pulvieto</Link></li>
+                    <li><Link to="/galeria">Galeria</Link></li>
+                    <li><Link to="/loja">Loja</Link></li>
+                    <li><Link to="/contacto">contacto</Link></li>
+                  </ul>
+                </nav>
+              </div>
+              <div className="mobile-menu"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  )
+}
