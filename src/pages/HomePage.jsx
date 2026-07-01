@@ -78,239 +78,172 @@ export default function HomePage() {
         </div>
       </div>
 
-      <div className="video-area pt-4 pb-4" style={{ backgroundImage: 'url(/img/files/1920-x-905.png)' }}>
-        <div className="container">
-          <div className="row">
-            <div className="col-xl-10 col-lg-10 offset-lg-1 offset-xl-1">
-              <div className="video-wrapper text-center mb-3">
-                <div className="video-text">
-                  <h1 style={{ fontSize: '35px' }}>Grupo Esperança Trading, Lda</h1>
-                  <h3 style={{ fontSize: '20px', fontWeight: 300 }}>Da terra angolana para a sua mesa</h3>
-                </div>
+      <div className="home-page">
+      <section className="s-stats">
+        <div className="s-container">
+          <div className="stats-grid">
+            <div className="stat-item">
+              <div className="stat-bar" />
+              <div className="stat-value">
+                <span className="stat-plus">+</span>
+                <CountUp end={3} />
               </div>
+              <span className="stat-label">Marcas</span>
+            </div>
+            <div className="stat-item">
+              <div className="stat-bar" />
+              <div className="stat-value">
+                <span className="stat-plus">+</span>
+                <CountUp end={100} />
+              </div>
+              <span className="stat-label">% Orgânico</span>
+            </div>
+            <div className="stat-item">
+              <div className="stat-bar" />
+              <div className="stat-value">
+                <span className="stat-plus">+</span>
+                <CountUp end={0} />
+              </div>
+              <span className="stat-label">Conservantes</span>
             </div>
           </div>
-          <div className="counter-bg pt-70 pb-50" style={{ backgroundColor: '#00000059' }}>
-            <div className="row justify-content-around">
-              <div className="col-xl-3 col-lg-3 col-md-6">
-                <div className="counter-wrapper mb-30">
-                  <div className="counter-icon">
-                    <span className="plus">+</span>
-                    <div className="counter-text">
-                      <CountUp end={3} />
-                      <span className="textCounter">Marcas</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-xl-3 col-lg-3 col-md-6">
-                <div className="counter-wrapper mb-30">
-                  <div className="counter-icon">
-                    <span className="plus">+</span>
-                    <div className="counter-text">
-                      <CountUp end={100} />
-                      <span className="textCounter">% Orgânico</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-xl-3 col-lg-3 col-md-6">
-                <div className="counter-wrapper mb-30">
-                  <div className="counter-icon">
-                    <span className="plus">+</span>
-                    <div className="counter-text">
-                      <CountUp end={0} />
-                      <span className="textCounter">Conservantes</span>
-                    </div>
-                  </div>
-                </div>
+        </div>
+      </section>
+
+      <section className="s-about">
+        <div className="s-container">
+          <div className="about-grid">
+            <div className="about-text-col">
+              <span className="s-eyebrow">Sobre Nós</span>
+              <h2 className="s-title">Quem Somos</h2>
+              <p className="about-body">
+                O Grupo Esperança Trading, Lda é uma empresa angolana de transformação alimentar, comprometida com o desenvolvimento industrial e a promoção da saúde através da alimentação. Detentora das marcas Toto Drink e Toto Food, a empresa actua na produção de sumos naturais sem conservantes e alimentos africanos tradicionais, valorizando os produtos da terra e impulsionando o consumo orgânico em Angola e além-fronteiras.
+              </p>
+              <p className="about-body">
+                <strong>Da terra angolana para a sua mesa</strong> — Cada produto nasce do compromisso com a terra, com os agricultores locais e com a saúde de quem nos escolhe. Produzimos com respeito pela origem natural dos ingredientes, sem aditivos químicos e sem conservantes.
+              </p>
+              <Link className="about-btn" to="/sobre">Saiba Mais</Link>
+            </div>
+            <div className="about-img-col">
+              <div className="about-frame">
+                <img src="/img/about/about.jpg" alt="Grupo Esperança Trading" />
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div className="about-area pos-relative pt-70">
-        <div className="container">
-          <div className="row">
-            <div className="col-12 mb-5">
-              <div className="about-2-wrapper text-center">
-                <div className="section-title section-title-cap mb-2">
-                  <h3>Quem Somos</h3>
-                  <p>O Grupo Esperança Trading, Lda é uma empresa angolana de transformação alimentar, comprometida com o desenvolvimento industrial e a promoção da saúde através da alimentação. Detentora das marcas Toto Drink e Toto Food, a empresa actua na produção de sumos naturais sem conservantes e alimentos africanos tradicionais, valorizando os produtos da terra e impulsionando o consumo orgânico em Angola e além-fronteiras.</p>
-                  <p><strong>Da terra angolana para a sua mesa</strong> — Cada produto nasce do compromisso com a terra, com os agricultores locais e com a saúde de quem nos escolhe. Produzimos com respeito pela origem natural dos ingredientes, sem aditivos químicos e sem conservantes.</p>
-                </div>
-                <Link className="btn" to="/sobre">Saiba Mais</Link>
-              </div>
+      <section className="s-section-alt">
+        <div className="s-container">
+          <div className="s-header">
+            <span className="s-eyebrow">Diferenciais</span>
+            <h2 className="s-title">Porque Nos Escolher</h2>
+          </div>
+          <div className="why-grid">
+            <div className="why-card">
+              <div className="why-icon"><i className="fas fa-globe-africa" /></div>
+              <h3 className="why-title">100% Origem Angolana</h3>
+              <p className="why-text">Ingredientes colhidos directamente da terra angolana, valorizando produtores e tradições locais.</p>
+            </div>
+            <div className="why-card">
+              <div className="why-icon"><i className="fas fa-ban" /></div>
+              <h3 className="why-title">Sem Conservantes</h3>
+              <p className="why-text">Produção natural, sem aditivos químicos, preservando o sabor genuíno e os benefícios nutricionais.</p>
+            </div>
+            <div className="why-card">
+              <div className="why-icon"><i className="fas fa-truck" /></div>
+              <h3 className="why-title">Entrega à Sua Porta</h3>
+              <p className="why-text">Faça a sua encomenda e receba directamente em casa, com rapidez e confiança.</p>
+            </div>
+            <div className="why-card">
+              <div className="why-icon"><i className="fas fa-shopping-cart" /></div>
+              <h3 className="why-title">Compra Online Facilitada</h3>
+              <p className="why-text">Realize a sua compra directamente nas nossas plataformas digitais, de forma simples e segura.</p>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div className="service-area pt-70 pb-70" style={{ backgroundImage: 'url(/img/bg/bg16.jpg)' }}>
-        <div className="container">
-          <div className="row">
-            <div className="col-md-8 mx-auto">
-              <div className="section-title section-title-cap text-center mb-5">
-                <h1>As Nossas Marcas</h1>
-                <p>Três marcas, um compromisso: levar o melhor da terra angolana até si</p>
-              </div>
-            </div>
+      <section className="s-section">
+        <div className="s-container">
+          <div className="s-header">
+            <span className="s-eyebrow">Marcas</span>
+            <h2 className="s-title">As Nossas Marcas</h2>
+            <p className="s-sub">Três marcas, um compromisso: levar o melhor da terra angolana até si</p>
           </div>
-          <div className="row">
-            <div className="col-md-4 mb-4">
-              <div className="text-center p-4" style={{ background: '#fff', borderRadius: 10, height: '100%' }}>
-                <div style={{ fontSize: 50, color: '#4caf50', marginBottom: 15 }}>
-                  <i className="fas fa-leaf"></i>
-                </div>
-                <h4>Toto Drink</h4>
-                <p style={{ fontStyle: 'italic' }}>Sumos naturais, 100% orgânicos, sem conservantes</p>
-                <p>Produzidos a partir de frutas locais cuidadosamente seleccionadas, os sumos Toto Drink trazem o sabor genuíno de Angola directamente para a sua mesa.</p>
-                <Link className="btn" to="/marcas">Saber Mais</Link>
-              </div>
+          <div className="brands-grid">
+            <div className="brand-card">
+              <div className="brand-icon"><i className="fas fa-leaf" /></div>
+              <h3 className="brand-name">Toto Drink</h3>
+              <p className="brand-tagline">Sumos naturais, 100% orgânicos, sem conservantes</p>
+              <p className="brand-desc">Produzidos a partir de frutas locais cuidadosamente seleccionadas, os sumos Toto Drink trazem o sabor genuíno de Angola directamente para a sua mesa.</p>
+              <Link className="brand-btn" to="/marcas">Saber Mais</Link>
             </div>
-            <div className="col-md-4 mb-4">
-              <div className="text-center p-4" style={{ background: '#fff', borderRadius: 10, height: '100%' }}>
-                <div style={{ fontSize: 50, color: '#8d6e63', marginBottom: 15 }}>
-                  <i className="fas fa-utensils"></i>
-                </div>
-                <h4>Toto Food</h4>
-                <p style={{ fontStyle: 'italic' }}>Linha alimentar tradicional africana</p>
-                <p>Uma linha centrada em pratos e conservas típicas africanas, que preserva o sabor autêntico e as características nutricionais dos alimentos angolanos.</p>
-                <Link className="btn" to="/marcas">Saber Mais</Link>
-              </div>
+            <div className="brand-card">
+              <div className="brand-icon"><i className="fas fa-utensils" /></div>
+              <h3 className="brand-name">Toto Food</h3>
+              <p className="brand-tagline">Linha alimentar tradicional africana</p>
+              <p className="brand-desc">Uma linha centrada em pratos e conservas típicas africanas, que preserva o sabor autêntico e as características nutricionais dos alimentos angolanos.</p>
+              <Link className="brand-btn" to="/marcas">Saber Mais</Link>
             </div>
-            <div className="col-md-4 mb-4">
-              <div className="text-center p-4" style={{ background: '#fff', borderRadius: 10, height: '100%' }}>
-                <div style={{ fontSize: 50, color: '#ff7043', marginBottom: 15 }}>
-                  <i className="fas fa-drumstick-bite"></i>
-                </div>
-                <h4>Frango Premium</h4>
-                <p style={{ fontStyle: 'italic' }}>Frango grelhado e assado, com acompanhamentos típicos</p>
-                <p>Frango grelhado ou assado, servido com kiquanga, banana-pão frita ou batata — qualidade premium ao sabor tradicional angolano.</p>
-                <Link className="btn" to="/marcas">Saber Mais</Link>
-              </div>
+            <div className="brand-card">
+              <div className="brand-icon"><i className="fas fa-drumstick-bite" /></div>
+              <h3 className="brand-name">Frango Premium</h3>
+              <p className="brand-tagline">Frango grelhado e assado, com acompanhamentos típicos</p>
+              <p className="brand-desc">Frango grelhado ou assado, servido com kiquanga, banana-pão frita ou batata — qualidade premium ao sabor tradicional angolano.</p>
+              <Link className="brand-btn" to="/marcas">Saber Mais</Link>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div className="product-area pos-relative pt-70 pb-70">
-        <div className="container">
-          <div className="row">
-            <div className="col-12">
-              <div className="section-title section-title-cap text-center mb-5">
-                <h1>Porque Nos Escolher</h1>
-              </div>
-            </div>
+      <section className="s-section-alt">
+        <div className="s-container">
+          <div className="s-header">
+            <span className="s-eyebrow">Produtos</span>
+            <h2 className="s-title">Nossos Produtos</h2>
+            <p className="s-sub">Conheça a nossa linha de produtos naturais</p>
           </div>
-          <div className="row">
-            <div className="col-md-3 mb-4">
-              <div className="text-center p-3">
-                <div style={{ fontSize: 40, color: '#4caf50', marginBottom: 10 }}>
-                  <i className="fas fa-globe-africa"></i>
-                </div>
-                <h5>100% Origem Angolana</h5>
-                <p>Ingredientes colhidos directamente da terra angolana, valorizando produtores e tradições locais.</p>
-              </div>
-            </div>
-            <div className="col-md-3 mb-4">
-              <div className="text-center p-3">
-                <div style={{ fontSize: 40, color: '#4caf50', marginBottom: 10 }}>
-                  <i className="fas fa-ban"></i>
-                </div>
-                <h5>Sem Conservantes</h5>
-                <p>Produção natural, sem aditivos químicos, preservando o sabor genuíno e os benefícios nutricionais.</p>
-              </div>
-            </div>
-            <div className="col-md-3 mb-4">
-              <div className="text-center p-3">
-                <div style={{ fontSize: 40, color: '#4caf50', marginBottom: 10 }}>
-                  <i className="fas fa-truck"></i>
-                </div>
-                <h5>Entrega à Sua Porta</h5>
-                <p>Faça a sua encomenda e receba directamente em casa, com rapidez e confiança.</p>
-              </div>
-            </div>
-            <div className="col-md-3 mb-4">
-              <div className="text-center p-3">
-                <div style={{ fontSize: 40, color: '#4caf50', marginBottom: 10 }}>
-                  <i className="fas fa-shopping-cart"></i>
-                </div>
-                <h5>Compra Online Facilitada</h5>
-                <p>Realize a sua compra directamente nas nossas plataformas digitais, de forma simples e segura.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="service-area pt-70 pb-70" style={{ backgroundImage: 'url(/img/bg/bg16.jpg)' }}>
-        <div className="container">
-          <div className="row">
-            <div className="col-md-8 mx-auto">
-              <div className="section-title section-title-cap text-center mb-5">
-                <h1>Nossos Produtos</h1>
-                <p>Conheça a nossa linha de produtos naturais</p>
-              </div>
-            </div>
-          </div>
-          <div className="row">
+          <div className="products-grid">
             {products.sumo_natural.slice(0, 4).map((product, i) => (
-              <div key={i} className="col-xl-3 col-lg-3 col-md-6">
-                <div className="product-wrapper text-center mb-30">
-                  <div className="product-img">
-                    <a href="#"><img src={product.image} alt={product.name} /></a>
-                  </div>
-                  <div className="product-text">
-                    <h4><a href="#">{product.name}</a></h4>
-                    <div className="pro-price"><span>{product.price}</span></div>
-                    <br />
-                    <a className="btn px-2 py-2" href="#">COMPRAR</a>
-                  </div>
+              <div key={i} className="prod-card">
+                <div className="prod-img">
+                  <a href="#"><img src={product.image} alt={product.name} /></a>
                 </div>
+                <h4 className="prod-name"><a href="#" style={{ color: 'inherit', textDecoration: 'none' }}>{product.name}</a></h4>
+                <span className="prod-price">{product.price}</span>
+                <a className="prod-btn" href="#">COMPRAR</a>
               </div>
             ))}
           </div>
-          <div className="row">
-            <div className="col-xl-12">
-              <div className="product-button product1-button mt-30 text-center">
-                <Link className="btn" to="/loja">Veja Mais</Link>
-              </div>
+          <div className="products-more">
+            <Link to="/loja">Veja Mais</Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="s-cta">
+        <div className="s-container">
+          <div className="cta-content">
+            <h2 className="cta-title">Faça já a sua encomenda</h2>
+            <p className="cta-text">Da terra angolana para a sua mesa — produtos naturais, frescos e feitos com cuidado.</p>
+            <Link className="cta-btn" to="/contacto">Encomendar Agora</Link>
+          </div>
+        </div>
+      </section>
+
+      <div className="s-social">
+        <div className="s-container">
+          <div className="social-layout">
+            <BrandsCarousel />
+            <div className="social-links">
+              <a className="social-link" href="#" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f" /></a>
+              <a className="social-link" href="#" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram" /></a>
+              <a className="social-link" href="#" target="_blank" rel="noopener noreferrer"><i className="fab fa-whatsapp" /></a>
             </div>
           </div>
         </div>
       </div>
-
-      <div className="about-area pos-relative pt-70 pb-70">
-        <div className="container">
-          <div className="row">
-            <div className="col-12 text-center">
-              <h2>Faça já a sua encomenda</h2>
-              <p className="mb-4" style={{ fontSize: 18 }}>Da terra angolana para a sua mesa — produtos naturais, frescos e feitos com cuidado.</p>
-              <Link className="btn" to="/contacto">Encomendar Agora</Link>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="brand-area pt-5">
-        <div className="container">
-          <div className="brand-bg pb-50">
-            <div className="row">
-              <div className="col-xl-9 col-lg-8 col-md-7">
-                <BrandsCarousel />
-              </div>
-              <div className="col-xl-3 col-lg-4 col-md-5">
-                <div className="bottom-social-icon text-md-right">
-                  <a href="#" target="_blank"><i className="fab fa-facebook-f"></i></a>
-                  <a href="#" target="_blank"><i className="fab fa-instagram"></i></a>
-                  <a href="#" target="_blank"><i className="fab fa-whatsapp"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </>
   )
@@ -351,7 +284,7 @@ function CountUp({ end }) {
     return () => clearInterval(timer)
   }, [counted, end])
 
-  return <h1 className="counter textCounter" ref={ref}>{count}</h1>
+  return <h1 className="counter" ref={ref}>{count}</h1>
 }
 
 function BrandsCarousel() {
