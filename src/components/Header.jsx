@@ -2,7 +2,8 @@ import { useState, useEffect, useRef } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
 export default function Header() {
-  const location = useLocation()
+  const { pathname } = useLocation()
+  const isHome = pathname === '/'
   const headerRef = useRef(null)
   const [mobileOpen, setMobileOpen] = useState(false)
 
@@ -25,7 +26,7 @@ export default function Header() {
   }, [location])
 
   return (
-    <header className="header-transparent">
+    <header className={`header-transparent${!isHome ? ' header-light' : ''}`}>
       <div ref={headerRef} id="sticky-header" className="main-menu-area mt-20">
         <div className="container">
           <div className="row">

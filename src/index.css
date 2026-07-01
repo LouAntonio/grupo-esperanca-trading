@@ -710,8 +710,11 @@
   font-weight: 600 !important;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: #fff !important;
   transition: color 0.3s;
+}
+
+.header-light .main-menu nav > ul > li > a {
+  color: #fff !important;
 }
 
 .sticky .main-menu nav > ul > li > a {
