@@ -288,37 +288,24 @@ function CountUp({ end }) {
 }
 
 function BrandsCarousel() {
-  const swiperRef = useRef(null)
-
-  useEffect(() => {
-    import('swiper/bundle').then(({ default: Swiper }) => {
-      if (swiperRef.current) {
-        new Swiper(swiperRef.current, {
-          slidesPerView: 1,
-          navigation: true,
-          autoplay: true,
-          breakpoints: {
-            768: { slidesPerView: 1 },
-            992: { slidesPerView: 3 },
-          },
-        })
-      }
-    })
-  }, [])
-
+  const brands = [
+    { name: 'Toto Drink', icon: 'fa-leaf', color: '#4caf50' },
+    { name: 'Toto Food', icon: 'fa-utensils', color: '#8d6e63' },
+    { name: 'Frango Premium', icon: 'fa-drumstick-bite', color: '#ff7043' },
+  ]
   return (
-    <div className="brand-wrapper">
-      <div className="swiper" ref={swiperRef}>
-        <div className="swiper-wrapper">
-          {['Toto Drink', 'Toto Food', 'Frango Premium'].map((name, i) => (
-            <div key={i} className="swiper-slide">
-              <div className="brand-img text-center">
-                <h3 style={{ padding: '40px 0', color: '#333' }}>{name}</h3>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+    <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
+      {brands.map((b, i) => (
+        <span key={i} style={{
+          display: 'inline-flex', alignItems: 'center', gap: '8px',
+          padding: '8px 20px', borderRadius: '30px',
+          background: 'rgba(0,0,0,0.03)', fontSize: '14px',
+          fontWeight: 500, fontFamily: "'Rubik', sans-serif", color: '#555',
+        }}>
+          <i className={`fas ${b.icon}`} style={{ color: b.color }} />
+          {b.name}
+        </span>
+      ))}
     </div>
   )
 }

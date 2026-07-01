@@ -41,18 +41,16 @@ export default function StorePage() {
             ))}
           </div>
 
-          <div className="home-page products-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '24px' }}>
+          <div className="home-page products-grid">
             {products[activeTab]?.length > 0 ? (
               products[activeTab].map((product, i) => (
-                <div key={i} className="prod-card" style={{ background: '#f1f6fa', borderRadius: 'var(--radius-md)', padding: '32px 16px 24px', textAlign: 'center', transition: 'transform 0.3s, box-shadow 0.3s' }}>
-                  <div className="prod-img" style={{ marginBottom: '20px' }}>
-                    <a href="#"><img src={product.image} alt={product.name} style={{ width: '100%', maxWidth: '180px', height: '160px', objectFit: 'contain', display: 'block', margin: '0 auto' }} /></a>
+                <div key={i} className="prod-card">
+                  <div className="prod-img">
+                    <a href="#"><img src={product.image} alt={product.name} /></a>
                   </div>
-                  <h4 className="prod-name" style={{ fontFamily: "'Rubik', sans-serif", fontSize: '16px', fontWeight: 600, color: 'var(--color-dark)', margin: '0 0 6px' }}>
-                    <a href="#" style={{ color: 'inherit', textDecoration: 'none' }}>{product.name}</a>
-                  </h4>
-                  <span className="prod-price" style={{ fontSize: '14px', fontWeight: 500, color: 'var(--color-muted)', display: 'block', marginBottom: '16px' }}>{product.price}</span>
-                  <a className="prod-btn" href="#" style={{ display: 'inline-block', fontFamily: "'Rubik', sans-serif", fontSize: '12px', fontWeight: 600, letterSpacing: '1.5px', textTransform: 'uppercase', textDecoration: 'none', color: '#fff !important', background: 'var(--color-green) !important', padding: '10px 28px', borderRadius: '30px' }}>COMPRAR</a>
+                  <h4 className="prod-name"><a href="#" style={{ color: 'inherit', textDecoration: 'none' }}>{product.name}</a></h4>
+                  <span className="prod-price">{product.price}</span>
+                  <a className="prod-btn" href="#">COMPRAR</a>
                 </div>
               ))
             ) : (

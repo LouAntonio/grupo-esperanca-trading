@@ -28,7 +28,7 @@ export default function GalleryPage() {
 
   return (
     <>
-      <section className="page-hero" style={{ backgroundImage: 'url(/img/bg/bg15.jpg)' }}>
+      <section className="page-hero" style={{ backgroundImage: 'url(/img/bg/bg3.jpg)' }}>
         <div className="page-hero-content">
           <h1 className="page-hero-title">Galeria</h1>
           <p className="page-hero-subtitle">Veja imagens dos nossos produtos, eventos e muito mais...</p>
