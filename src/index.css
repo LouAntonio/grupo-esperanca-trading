@@ -766,6 +766,7 @@
 	font-weight: 600 !important;
 	letter-spacing: 1px;
 	text-transform: uppercase;
+	text-decoration: none;
 	transition: color 0.3s;
 }
 

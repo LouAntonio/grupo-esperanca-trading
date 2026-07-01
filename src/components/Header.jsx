@@ -41,22 +41,22 @@ export default function Header() {
 							<div className="main-menu" style={{ textAlign: 'right' }}>
 								<nav id="mobile-menu">
 									<ul>
-										<li>
+										<li className={pathname === '/' ? 'active' : ''}>
 											<Link to="/">Home</Link>
 										</li>
-										<li>
+										<li className={pathname === '/sobre' ? 'active' : ''}>
 											<Link to="/sobre">Sobre</Link>
 										</li>
-										<li>
+										<li className={pathname.startsWith('/marca') ? 'active' : ''}>
 											<Link to="/marcas">Marcas</Link>
 										</li>
-										<li>
+										<li className={pathname === '/catalogo' ? 'active' : ''}>
 											<Link to="/catalogo">Catálogo</Link>
 										</li>
-										<li>
+										<li className={pathname === '/galeria' ? 'active' : ''}>
 											<Link to="/galeria">Galeria</Link>
 										</li>
-										<li>
+										<li className={pathname === '/contacto' ? 'active' : ''}>
 											<Link to="/contacto">Contacto</Link>
 										</li>
 									</ul>
