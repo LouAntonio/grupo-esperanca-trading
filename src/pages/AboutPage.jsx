@@ -47,9 +47,7 @@ export default function AboutPage() {
 									marginBottom: '20px',
 								}}
 							>
-								<strong style={{ color: 'var(--color-dark)' }}>
-									{t('about_hero_subtitle')}
-								</strong>{' '}
+								<strong style={{ color: 'var(--color-dark)' }}>{t('about_hero_subtitle')}</strong>{' '}
 								{t('about_about_body_2')}
 							</p>
 							<Link className="s-btn s-btn-primary" to="/brands">
@@ -190,7 +188,8 @@ export default function AboutPage() {
 						className="home-page why-grid"
 						style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '24px' }}
 					>
-						<div className="why-card"
+						<div
+							className="why-card"
 							style={{
 								background: '#fff',
 								borderRadius: 'var(--radius-md)',
@@ -200,106 +199,178 @@ export default function AboutPage() {
 								transition: 'transform 0.3s, box-shadow 0.3s',
 							}}
 						>
-							<div className="why-icon"
+							<div
+								className="why-icon"
 								style={{
-									width: '52px', height: '52px', borderRadius: '50%',
-									background: 'rgba(134,186,9,0.1)', display: 'flex',
-									alignItems: 'center', justifyContent: 'center',
-									marginBottom: '16px', fontSize: '22px', color: 'var(--color-green)',
+									width: '52px',
+									height: '52px',
+									borderRadius: '50%',
+									background: 'rgba(134,186,9,0.1)',
+									display: 'flex',
+									alignItems: 'center',
+									justifyContent: 'center',
+									marginBottom: '16px',
+									fontSize: '22px',
+									color: 'var(--color-green)',
 								}}
 							>
 								<i className="fas fa-seedling" />
 							</div>
-							<h3 className="why-title"
-								style={{ fontFamily: "'Rubik', sans-serif", fontSize: '18px', fontWeight: 600, color: 'var(--color-dark)', margin: '0 0 8px' }}
+							<h3
+								className="why-title"
+								style={{
+									fontFamily: "'Rubik', sans-serif",
+									fontSize: '18px',
+									fontWeight: 600,
+									color: 'var(--color-dark)',
+									margin: '0 0 8px',
+								}}
 							>
 								{t('about_value_title_1')}
 							</h3>
-							<p className="why-text"
+							<p
+								className="why-text"
 								style={{ fontSize: '14px', lineHeight: '1.7', color: 'var(--color-muted)', margin: 0 }}
 							>
 								{t('about_value_text_1')}
 							</p>
 						</div>
-						<div className="why-card"
+						<div
+							className="why-card"
 							style={{
-								background: '#fff', borderRadius: 'var(--radius-md)', padding: '32px 28px',
-								boxShadow: 'var(--shadow-card)', border: '1px solid transparent',
+								background: '#fff',
+								borderRadius: 'var(--radius-md)',
+								padding: '32px 28px',
+								boxShadow: 'var(--shadow-card)',
+								border: '1px solid transparent',
 								transition: 'transform 0.3s, box-shadow 0.3s',
 							}}
 						>
-							<div className="why-icon"
+							<div
+								className="why-icon"
 								style={{
-									width: '52px', height: '52px', borderRadius: '50%',
-									background: 'rgba(134,186,9,0.1)', display: 'flex',
-									alignItems: 'center', justifyContent: 'center',
-									marginBottom: '16px', fontSize: '22px', color: 'var(--color-green)',
+									width: '52px',
+									height: '52px',
+									borderRadius: '50%',
+									background: 'rgba(134,186,9,0.1)',
+									display: 'flex',
+									alignItems: 'center',
+									justifyContent: 'center',
+									marginBottom: '16px',
+									fontSize: '22px',
+									color: 'var(--color-green)',
 								}}
 							>
 								<i className="fas fa-industry" />
 							</div>
-							<h3 className="why-title"
-								style={{ fontFamily: "'Rubik', sans-serif", fontSize: '18px', fontWeight: 600, color: 'var(--color-dark)', margin: '0 0 8px' }}
+							<h3
+								className="why-title"
+								style={{
+									fontFamily: "'Rubik', sans-serif",
+									fontSize: '18px',
+									fontWeight: 600,
+									color: 'var(--color-dark)',
+									margin: '0 0 8px',
+								}}
 							>
 								{t('about_value_title_2')}
 							</h3>
-							<p className="why-text"
+							<p
+								className="why-text"
 								style={{ fontSize: '14px', lineHeight: '1.7', color: 'var(--color-muted)', margin: 0 }}
 							>
 								{t('about_value_text_2')}
 							</p>
 						</div>
-						<div className="why-card"
+						<div
+							className="why-card"
 							style={{
-								background: '#fff', borderRadius: 'var(--radius-md)', padding: '32px 28px',
-								boxShadow: 'var(--shadow-card)', border: '1px solid transparent',
+								background: '#fff',
+								borderRadius: 'var(--radius-md)',
+								padding: '32px 28px',
+								boxShadow: 'var(--shadow-card)',
+								border: '1px solid transparent',
 								transition: 'transform 0.3s, box-shadow 0.3s',
 							}}
 						>
-							<div className="why-icon"
+							<div
+								className="why-icon"
 								style={{
-									width: '52px', height: '52px', borderRadius: '50%',
-									background: 'rgba(134,186,9,0.1)', display: 'flex',
-									alignItems: 'center', justifyContent: 'center',
-									marginBottom: '16px', fontSize: '22px', color: 'var(--color-green)',
+									width: '52px',
+									height: '52px',
+									borderRadius: '50%',
+									background: 'rgba(134,186,9,0.1)',
+									display: 'flex',
+									alignItems: 'center',
+									justifyContent: 'center',
+									marginBottom: '16px',
+									fontSize: '22px',
+									color: 'var(--color-green)',
 								}}
 							>
 								<i className="fas fa-users" />
 							</div>
-							<h3 className="why-title"
-								style={{ fontFamily: "'Rubik', sans-serif", fontSize: '18px', fontWeight: 600, color: 'var(--color-dark)', margin: '0 0 8px' }}
+							<h3
+								className="why-title"
+								style={{
+									fontFamily: "'Rubik', sans-serif",
+									fontSize: '18px',
+									fontWeight: 600,
+									color: 'var(--color-dark)',
+									margin: '0 0 8px',
+								}}
 							>
 								{t('about_value_title_3')}
 							</h3>
-							<p className="why-text"
+							<p
+								className="why-text"
 								style={{ fontSize: '14px', lineHeight: '1.7', color: 'var(--color-muted)', margin: 0 }}
 							>
 								{t('about_value_text_3')}
 							</p>
 						</div>
-						<div className="why-card"
+						<div
+							className="why-card"
 							style={{
-								background: '#fff', borderRadius: 'var(--radius-md)', padding: '32px 28px',
-								boxShadow: 'var(--shadow-card)', border: '1px solid transparent',
+								background: '#fff',
+								borderRadius: 'var(--radius-md)',
+								padding: '32px 28px',
+								boxShadow: 'var(--shadow-card)',
+								border: '1px solid transparent',
 								transition: 'transform 0.3s, box-shadow 0.3s',
 							}}
 						>
-							<div className="why-icon"
+							<div
+								className="why-icon"
 								style={{
-									width: '52px', height: '52px', borderRadius: '50%',
-									background: 'rgba(134,186,9,0.1)', display: 'flex',
-									alignItems: 'center', justifyContent: 'center',
-									marginBottom: '16px', fontSize: '22px', color: 'var(--color-green)',
+									width: '52px',
+									height: '52px',
+									borderRadius: '50%',
+									background: 'rgba(134,186,9,0.1)',
+									display: 'flex',
+									alignItems: 'center',
+									justifyContent: 'center',
+									marginBottom: '16px',
+									fontSize: '22px',
+									color: 'var(--color-green)',
 								}}
 							>
 								<i className="fas fa-chart-line" />
 							</div>
-							<h3 className="why-title"
-								style={{ fontFamily: "'Rubik', sans-serif", fontSize: '18px', fontWeight: 600, color: 'var(--color-dark)', margin: '0 0 8px' }}
+							<h3
+								className="why-title"
+								style={{
+									fontFamily: "'Rubik', sans-serif",
+									fontSize: '18px',
+									fontWeight: 600,
+									color: 'var(--color-dark)',
+									margin: '0 0 8px',
+								}}
 							>
 								{t('about_value_title_4')}
 							</h3>
-							<p className="why-text"
+							<p
+								className="why-text"
 								style={{ fontSize: '14px', lineHeight: '1.7', color: 'var(--color-muted)', margin: 0 }}
 							>
 								{t('about_value_text_4')}

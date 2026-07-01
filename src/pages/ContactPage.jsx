@@ -84,14 +84,18 @@ export default function ContactPage() {
 								<i className="fas fa-phone-alt" />
 							</div>
 							<h5>{t('contact_support_title')}</h5>
-							<p><a href="tel:946222900">946 222 900</a> / <a href="tel:946222708">946 222 708</a></p>
+							<p>
+								<a href="tel:946222900">946 222 900</a> / <a href="tel:946222708">946 222 708</a>
+							</p>
 						</div>
 						<div className="contact-info-card">
 							<div className="ci-icon">
 								<i className="fas fa-envelope" />
 							</div>
 							<h5>{t('contact_email_title')}</h5>
-							<p><a href="mailto:geral@grupoesperanca.com">geral@grupoesperanca.com</a></p>
+							<p>
+								<a href="mailto:geral@grupoesperanca.com">geral@grupoesperanca.com</a>
+							</p>
 						</div>
 						<div className="contact-info-card">
 							<div className="ci-icon" style={{ background: 'rgba(24,119,242,0.1)', color: '#1877f2' }}>
@@ -99,13 +103,31 @@ export default function ContactPage() {
 							</div>
 							<h5>{t('contact_social_title')}</h5>
 							<p style={{ display: 'flex', justifyContent: 'center', gap: '20px', fontSize: '20px' }}>
-								<a href="https://www.facebook.com/share/1bXnS9Mmdz" target="_blank" rel="noopener noreferrer" aria-label="Facebook" style={{ color: '#1877f2' }}>
+								<a
+									href="https://www.facebook.com/share/1bXnS9Mmdz"
+									target="_blank"
+									rel="noopener noreferrer"
+									aria-label="Facebook"
+									style={{ color: '#1877f2' }}
+								>
 									<i className="fab fa-facebook-f" />
 								</a>
-								<a href="https://www.instagram.com/totodrink.ao" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style={{ color: '#e4405f' }}>
+								<a
+									href="https://www.instagram.com/totodrink.ao"
+									target="_blank"
+									rel="noopener noreferrer"
+									aria-label="Instagram"
+									style={{ color: '#e4405f' }}
+								>
 									<i className="fab fa-instagram" />
 								</a>
-								<a href="https://wa.me/946222900" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" style={{ color: '#25d366' }}>
+								<a
+									href="https://wa.me/946222900"
+									target="_blank"
+									rel="noopener noreferrer"
+									aria-label="WhatsApp"
+									style={{ color: '#25d366' }}
+								>
 									<i className="fab fa-whatsapp" />
 								</a>
 							</p>

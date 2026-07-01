@@ -56,13 +56,13 @@ function MarqueeRow({ images, speed = 0.6, dir }) {
 		const step = () => {
 			const sw = setWidthRef.current;
 			if (readyRef.current && sw > 0 && !paused) {
-			if (dir === 'left') {
-				posRef.current -= speed;
-				if (posRef.current <= -sw) posRef.current = 0;
-			} else {
-				posRef.current += speed;
-				if (posRef.current >= 0) posRef.current = -sw;
-			}
+				if (dir === 'left') {
+					posRef.current -= speed;
+					if (posRef.current <= -sw) posRef.current = 0;
+				} else {
+					posRef.current += speed;
+					if (posRef.current >= 0) posRef.current = -sw;
+				}
 				trackRef.current.style.transform = `translateX(${posRef.current}px)`;
 			}
 			rafRef.current = requestAnimationFrame(step);

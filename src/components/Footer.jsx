@@ -11,13 +11,28 @@ export default function Footer() {
 				<div>
 					<div className="footer-desc">{t('footer_description')}</div>
 					<div className="footer-social">
-						<a href="https://www.facebook.com/share/1bXnS9Mmdz" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+						<a
+							href="https://www.facebook.com/share/1bXnS9Mmdz"
+							target="_blank"
+							rel="noopener noreferrer"
+							aria-label="Facebook"
+						>
 							<i className="fab fa-facebook-f" />
 						</a>
-						<a href="https://www.instagram.com/totodrink.ao" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+						<a
+							href="https://www.instagram.com/totodrink.ao"
+							target="_blank"
+							rel="noopener noreferrer"
+							aria-label="Instagram"
+						>
 							<i className="fab fa-instagram" />
 						</a>
-						<a href="https://wa.me/946222900" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+						<a
+							href="https://wa.me/946222900"
+							target="_blank"
+							rel="noopener noreferrer"
+							aria-label="WhatsApp"
+						>
 							<i className="fab fa-whatsapp" />
 						</a>
 					</div>

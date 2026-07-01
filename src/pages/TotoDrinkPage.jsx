@@ -80,7 +80,9 @@ export default function TotoDrinkPage() {
 								))
 							) : (
 								<div style={{ gridColumn: '1 / -1', textAlign: 'center', padding: '60px 0' }}>
-									<p style={{ fontSize: '16px', color: 'var(--color-muted)' }}>{t('store_coming_soon')}</p>
+									<p style={{ fontSize: '16px', color: 'var(--color-muted)' }}>
+										{t('store_coming_soon')}
+									</p>
 								</div>
 							)}
 						</div>

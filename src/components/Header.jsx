@@ -46,7 +46,10 @@ export default function Header() {
 									</Link>
 								</div>
 							</div>
-							<div className="col-xl-9 col-lg-9 row" style={{ justifyContent: 'end', alignItems: 'center' }}>
+							<div
+								className="col-xl-9 col-lg-9 row"
+								style={{ justifyContent: 'end', alignItems: 'center' }}
+							>
 								<div className="main-menu" style={{ textAlign: 'right' }}>
 									<nav id="mobile-menu">
 										<ul>

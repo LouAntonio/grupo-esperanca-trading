@@ -232,11 +232,11 @@ label {
 
 .lang-sidebar-btn:hover {
 	background: rgba(134, 186, 9, 0.1);
-	color: #86BA09;
+	color: #86ba09;
 }
 
 .lang-sidebar-btn.active {
-	background: #86BA09;
+	background: #86ba09;
 	color: #fff;
 	box-shadow: 0 1px 4px rgba(134, 186, 9, 0.3);
 }
