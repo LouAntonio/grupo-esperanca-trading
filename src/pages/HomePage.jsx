@@ -217,7 +217,7 @@ export default function HomePage() {
             ))}
           </div>
           <div className="products-more">
-            <Link to="/loja">Veja Mais</Link>
+            <Link to="/catalogo">Veja Mais</Link>
           </div>
         </div>
       </section>

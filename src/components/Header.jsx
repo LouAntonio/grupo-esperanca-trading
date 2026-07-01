@@ -42,7 +42,7 @@ export default function Header() {
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/sobre">Sobre</Link></li>
                     <li><Link to="/marcas">Marcas</Link></li>
-                    <li><Link to="/loja">Loja</Link></li>
+                    <li><Link to="/catalogo">Catálogo</Link></li>
                     <li><Link to="/galeria">Galeria</Link></li>
                     <li><Link to="/contacto">Contacto</Link></li>
                   </ul>

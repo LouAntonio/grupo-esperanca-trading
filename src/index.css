@@ -408,7 +408,8 @@
 .home-page .prod-img img {
   width: 100%;
   max-width: 180px;
-  height: 160px;
+  aspect-ratio: 1;
+  max-height: 200px;
   object-fit: contain;
   display: block;
   margin: 0 auto;

@@ -20,10 +20,10 @@ export default function Footer() {
         <div>
           <h4 className="footer-title">Marcas</h4>
           <ul className="footer-links">
-            <li><Link to="/marcas">Toto Drink — Sumos Naturais</Link></li>
-            <li><Link to="/marcas">Toto Food — Linha Tradicional</Link></li>
-            <li><Link to="/marcas">Frango Premium</Link></li>
-            <li><Link to="/loja">Loja Online</Link></li>
+            <li><Link to="/marca/toto-drink">Toto Drink — Sumos Naturais</Link></li>
+            <li><Link to="/marca/toto-food">Toto Food — Linha Tradicional</Link></li>
+            <li><Link to="/marca/frango-premium">Frango Premium</Link></li>
+            <li><Link to="/catalogo">Catálogo</Link></li>
           </ul>
         </div>
 
@@ -32,7 +32,7 @@ export default function Footer() {
           <ul className="footer-address">
             <li>
               <strong>Endereço</strong>
-              Av. Pedro de Castro Van-Dúnem Loy, Golf 2, Luanda — Angola
+              Rua 123, Bairro Industrial, Luanda, Angola
             </li>
             <li>
               <strong>Telefone</strong>
@@ -40,7 +40,7 @@ export default function Footer() {
             </li>
             <li>
               <strong>Email</strong>
-              geral@academiaindustrial.net
+              geral@grupoesperanca.com
             </li>
           </ul>
         </div>
@@ -49,7 +49,7 @@ export default function Footer() {
       <div className="footer-bottom">
         <div className="footer-bottom-inner">
           <p>Copyright &copy; {year} <a href="#">Grupo Esperança Trading, Lda</a>. Todos os Direitos Reservados.</p>
-          <p>Desenvolvido por <a href="https://caxinda.com" target="_blank" rel="noopener noreferrer">Caxinda Divulga</a></p>
+          <p>Desenvolvido por <a href="https://louantonio.me" target="_blank" rel="noopener noreferrer">LouAntonio</a></p>
         </div>
       </div>
     </footer>

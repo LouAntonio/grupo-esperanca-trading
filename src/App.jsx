@@ -7,6 +7,9 @@ import AboutPage from './pages/AboutPage'
 import BrandsPage from './pages/BrandsPage'
 import GalleryPage from './pages/GalleryPage'
 import StorePage from './pages/StorePage'
+import TotoDrinkPage from './pages/TotoDrinkPage'
+import TotoFoodPage from './pages/TotoFoodPage'
+import FrangoPremiumPage from './pages/FrangoPremiumPage'
 import ContactPage from './pages/ContactPage'
 
 function ScrollToTop() {
@@ -35,7 +38,10 @@ export default function App() {
       <Route path="/sobre" element={<Layout><AboutPage /></Layout>} />
       <Route path="/marcas" element={<Layout><BrandsPage /></Layout>} />
       <Route path="/galeria" element={<Layout><GalleryPage /></Layout>} />
-      <Route path="/loja" element={<Layout><StorePage /></Layout>} />
+      <Route path="/catalogo" element={<Layout><StorePage /></Layout>} />
+      <Route path="/marca/toto-drink" element={<Layout><TotoDrinkPage /></Layout>} />
+      <Route path="/marca/toto-food" element={<Layout><TotoFoodPage /></Layout>} />
+      <Route path="/marca/frango-premium" element={<Layout><FrangoPremiumPage /></Layout>} />
       <Route path="/contacto" element={<Layout><ContactPage /></Layout>} />
     </Routes>
   )

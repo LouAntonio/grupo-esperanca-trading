@@ -22,7 +22,7 @@ export default function BrandsPage() {
               <h2 className="s-title">Toto Drink</h2>
               <p className="brand-tagline-inline">Sumos naturais, 100% orgânicos, sem conservantes</p>
               <p>Produzidos a partir de frutas locais cuidadosamente seleccionadas, os sumos Toto Drink trazem o sabor genuíno de Angola directamente para a sua mesa. Sem aditivos químicos, sem conservantes — apenas fruta, frescura e qualidade em cada garrafa.</p>
-              <Link className="s-btn s-btn-primary" to="/loja">Ver Produtos</Link>
+              <Link className="s-btn s-btn-primary" to="/marca/toto-drink">Ver Produtos</Link>
             </div>
           </div>
         </div>
@@ -39,7 +39,7 @@ export default function BrandsPage() {
               <h2 className="s-title">Toto Food</h2>
               <p className="brand-tagline-inline">Linha alimentar tradicional africana</p>
               <p>Uma linha centrada em pratos e conservas típicas africanas, que preserva o sabor autêntico e as características nutricionais dos alimentos angolanos. Toto Food é a forma de manter viva a tradição alimentar do nosso país, com qualidade industrial e confiança de mesa.</p>
-              <Link className="s-btn s-btn-primary" to="/loja">Ver Produtos</Link>
+              <Link className="s-btn s-btn-primary" to="/marca/toto-food">Ver Produtos</Link>
             </div>
           </div>
         </div>
@@ -56,7 +56,7 @@ export default function BrandsPage() {
               <h2 className="s-title">Frango Premium</h2>
               <p className="brand-tagline-inline">Frango grelhado e assado, com acompanhamentos típicos</p>
               <p>Frango grelhado ou assado, servido com kiquanga, banana-pão frita ou batata — uma proposta gastronómica que une qualidade premium ao sabor tradicional angolano, ideal para o dia a dia ou para eventos especiais.</p>
-              <Link className="s-btn s-btn-primary" to="/loja">Ver Produtos</Link>
+              <Link className="s-btn s-btn-primary" to="/marca/frango-premium">Ver Produtos</Link>
             </div>
           </div>
         </div>
