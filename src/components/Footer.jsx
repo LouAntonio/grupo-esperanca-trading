@@ -13,13 +13,10 @@ export default function Footer() {
 						e orgânicos.
 					</div>
 					<div className="footer-social">
-						<a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-							<i className="fab fa-facebook-f" />
-						</a>
-						<a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+						<a href="https://www.instagram.com/totodrink.ao" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
 							<i className="fab fa-instagram" />
 						</a>
-						<a href="#" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+						<a href="https://wa.me/946222900" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
 							<i className="fab fa-whatsapp" />
 						</a>
 					</div>
@@ -45,15 +42,15 @@ export default function Footer() {
 					<ul className="footer-address">
 						<li>
 							<strong>Endereço</strong>
-							Rua 123, Bairro Industrial, Luanda, Angola
+							Golf 2. Quintalão do Petro, entre o Banco Sol e Fábrica de Blocos.
 						</li>
 						<li>
 							<strong>Telefone</strong>
-							912 345 678 / 910 234 567
+							<a href="tel:946222900">946 222 900</a> / <a href="tel:946222708">946 222 708</a>
 						</li>
 						<li>
 							<strong>Email</strong>
-							geral@grupoesperanca.com
+							<a href="mailto:geral@grupoesperanca.com">geral@grupoesperanca.com</a>
 						</li>
 					</ul>
 				</div>

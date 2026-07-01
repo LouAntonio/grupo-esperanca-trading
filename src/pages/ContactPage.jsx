@@ -77,21 +77,21 @@ export default function ContactPage() {
 								<i className="fas fa-map-marker-alt" />
 							</div>
 							<h5>Localização</h5>
-							<p>Rua 123, Bairro Industrial, Luanda, Angola</p>
+							<p>Golf 2. Quintalão do Petro, entre o Banco Sol e Fábrica de Blocos.</p>
 						</div>
 						<div className="contact-info-card">
 							<div className="ci-icon">
 								<i className="fas fa-phone-alt" />
 							</div>
 							<h5>Suporte</h5>
-							<p>912 345 678 / 910 234 567</p>
+							<p><a href="tel:946222900">946 222 900</a> / <a href="tel:946222708">946 222 708</a></p>
 						</div>
 						<div className="contact-info-card">
 							<div className="ci-icon">
 								<i className="fas fa-envelope" />
 							</div>
 							<h5>Email</h5>
-							<p>geral@grupoesperanca.com</p>
+							<p><a href="mailto:geral@grupoesperanca.com">geral@grupoesperanca.com</a></p>
 						</div>
 					</div>
 				</div>
