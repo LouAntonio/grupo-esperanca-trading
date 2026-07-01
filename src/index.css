@@ -1279,6 +1279,68 @@
   margin: 0;
 }
 
+/* ========== CONTACT SPLIT FORM ========== */
+
+.contact-split {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.contact-form-box {
+  background: #fff;
+  border-radius: var(--radius-md);
+  padding: 40px;
+  box-shadow: var(--shadow-card);
+  border: 1px solid #e5e7e6;
+}
+
+.contact-form-box .form-title {
+  font-family: 'Rubik', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-dark);
+  margin: 0 0 4px;
+}
+
+.contact-form-box .form-sub {
+  font-size: 14px;
+  color: var(--color-muted);
+  margin: 0 0 24px;
+  line-height: 1.6;
+}
+
+.form-feedback {
+  padding: 14px 18px;
+  border-radius: var(--radius-sm);
+  margin-top: 16px;
+  font-size: 14px;
+  font-weight: 500;
+  display: none;
+}
+
+.form-feedback.show {
+  display: block;
+}
+
+.form-feedback.success {
+  background: rgba(134, 186, 9, 0.1);
+  color: var(--color-green);
+  border: 1px solid rgba(134, 186, 9, 0.25);
+}
+
+.form-feedback.error {
+  background: rgba(193, 36, 42, 0.1);
+  color: var(--color-red);
+  border: 1px solid rgba(193, 36, 42, 0.25);
+}
+
+@media (max-width: 900px) {
+  .contact-split { grid-template-columns: 1fr; }
+  .contact-form-box { padding: 28px 24px; }
+}
+
 /* ========== RESPONSIVE ========== */
 
 @media (max-width: 900px) {
