@@ -93,6 +93,23 @@ export default function ContactPage() {
 							<h5>Email</h5>
 							<p><a href="mailto:geral@grupoesperanca.com">geral@grupoesperanca.com</a></p>
 						</div>
+						<div className="contact-info-card">
+							<div className="ci-icon" style={{ background: 'rgba(24,119,242,0.1)', color: '#1877f2' }}>
+								<i className="fas fa-share-alt" />
+							</div>
+							<h5>Redes Sociais</h5>
+							<p style={{ display: 'flex', justifyContent: 'center', gap: '20px', fontSize: '20px' }}>
+								<a href="https://www.facebook.com/share/1bXnS9Mmdz" target="_blank" rel="noopener noreferrer" aria-label="Facebook" style={{ color: '#1877f2' }}>
+									<i className="fab fa-facebook-f" />
+								</a>
+								<a href="https://www.instagram.com/totodrink.ao" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style={{ color: '#e4405f' }}>
+									<i className="fab fa-instagram" />
+								</a>
+								<a href="https://wa.me/946222900" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" style={{ color: '#25d366' }}>
+									<i className="fab fa-whatsapp" />
+								</a>
+							</p>
+						</div>
 					</div>
 				</div>
 			</section>

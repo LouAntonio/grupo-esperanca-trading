@@ -13,6 +13,9 @@ export default function Footer() {
 						e orgânicos.
 					</div>
 					<div className="footer-social">
+						<a href="https://www.facebook.com/share/1bXnS9Mmdz" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+							<i className="fab fa-facebook-f" />
+						</a>
 						<a href="https://www.instagram.com/totodrink.ao" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
 							<i className="fab fa-instagram" />
 						</a>
@@ -41,16 +44,16 @@ export default function Footer() {
 					<h4 className="footer-title">Contactos</h4>
 					<ul className="footer-address">
 						<li>
-							<strong>Endereço</strong>
-							Golf 2. Quintalão do Petro, entre o Banco Sol e Fábrica de Blocos.
-						</li>
-						<li>
 							<strong>Telefone</strong>
 							<a href="tel:946222900">946 222 900</a> / <a href="tel:946222708">946 222 708</a>
 						</li>
 						<li>
 							<strong>Email</strong>
 							<a href="mailto:geral@grupoesperanca.com">geral@grupoesperanca.com</a>
+						</li>
+						<li>
+							<strong>Endereço</strong>
+							Golf 2. Quintalão do Petro, entre o Banco Sol e Fábrica de Blocos.
 						</li>
 					</ul>
 				</div>
@@ -62,12 +65,7 @@ export default function Footer() {
 						Copyright &copy; {year} <a href="#">Grupo Esperança Trading, Lda</a>. Todos os Direitos
 						Reservados.
 					</p>
-					<p>
-						Desenvolvido por{' '}
-						<a href="https://louantonio.me" target="_blank" rel="noopener noreferrer">
-							LouAntonio
-						</a>
-					</p>
+					<p>Desenvolvido por Caxinda Divulga</p>
 				</div>
 			</div>
 		</footer>
