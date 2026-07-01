@@ -1,12 +1,15 @@
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 export default function AboutPage() {
+	const { t } = useTranslation();
+
 	return (
 		<>
 			<section className="page-hero" style={{ backgroundImage: 'url(/img/files/Quem-Somos-1920-x-1080.png)' }}>
 				<div className="page-hero-content">
-					<h1 className="page-hero-title">Grupo Esperança Trading, Lda</h1>
-					<p className="page-hero-subtitle">Da terra angolana para a sua mesa</p>
+					<h1 className="page-hero-title">{t('about_hero_title')}</h1>
+					<p className="page-hero-subtitle">{t('about_hero_subtitle')}</p>
 				</div>
 			</section>
 
@@ -17,12 +20,12 @@ export default function AboutPage() {
 						style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', alignItems: 'center' }}
 					>
 						<div className="about-text-col">
-							<span className="s-eyebrow">Sobre Nós</span>
+							<span className="s-eyebrow">{t('about_about_eyebrow')}</span>
 							<h2
 								className="s-title"
 								style={{ position: 'relative', paddingBottom: '16px', marginBottom: '20px' }}
 							>
-								Quem Somos
+								{t('about_about_title')}
 							</h2>
 							<p
 								className="about-body"
@@ -33,11 +36,7 @@ export default function AboutPage() {
 									marginBottom: '20px',
 								}}
 							>
-								O Grupo Esperança Trading, Lda é uma empresa angolana de transformação alimentar,
-								comprometida com o desenvolvimento industrial e a promoção da saúde através da
-								alimentação. Detentora das marcas Toto Drink e Toto Food, a empresa actua na produção de
-								sumos naturais sem conservantes e alimentos africanos tradicionais, valorizando os
-								produtos da terra e impulsionando o consumo orgânico em Angola e além-fronteiras.
+								{t('about_about_body_1')}
 							</p>
 							<p
 								className="about-body"
@@ -49,14 +48,12 @@ export default function AboutPage() {
 								}}
 							>
 								<strong style={{ color: 'var(--color-dark)' }}>
-									Da terra angolana para a sua mesa
+									{t('about_hero_subtitle')}
 								</strong>{' '}
-								— Cada produto nasce do compromisso com a terra, com os agricultores locais e com a
-								saúde de quem nos escolhe. Produzimos com respeito pela origem natural dos ingredientes,
-								sem aditivos químicos e sem conservantes.
+								{t('about_about_body_2')}
 							</p>
-							<Link className="s-btn s-btn-primary" to="/marcas">
-								Conheça as Nossas Marcas
+							<Link className="s-btn s-btn-primary" to="/brands">
+								{t('about_about_btn')}
 							</Link>
 						</div>
 						<div className="about-img-col" style={{ display: 'flex', justifyContent: 'center' }}>
@@ -83,8 +80,8 @@ export default function AboutPage() {
 			<section className="s-section-alt">
 				<div className="s-container">
 					<div className="s-header">
-						<span className="s-eyebrow">Propósito</span>
-						<h2 className="s-title">Missão & Visão</h2>
+						<span className="s-eyebrow">{t('about_purpose_eyebrow')}</span>
+						<h2 className="s-title">{t('about_purpose_title')}</h2>
 					</div>
 					<div className="mission-grid">
 						<div
@@ -124,14 +121,13 @@ export default function AboutPage() {
 									margin: '0 0 8px',
 								}}
 							>
-								Missão
+								{t('about_mission_title')}
 							</h3>
 							<p
 								className="why-text"
 								style={{ fontSize: '14px', lineHeight: '1.7', color: 'var(--color-muted)', margin: 0 }}
 							>
-								Promover a boa saúde através de uma alimentação saudável, investindo na indústria
-								alimentar orgânica e na transformação de produtos sem aditivos químicos.
+								{t('about_mission_text')}
 							</p>
 						</div>
 						<div
@@ -171,15 +167,13 @@ export default function AboutPage() {
 									margin: '0 0 8px',
 								}}
 							>
-								Visão
+								{t('about_vision_title')}
 							</h3>
 							<p
 								className="why-text"
 								style={{ fontSize: '14px', lineHeight: '1.7', color: 'var(--color-muted)', margin: 0 }}
 							>
-								Transformar Angola e África em referências industriais, capazes de combater a
-								insuficiência alimentar e reduzir a pobreza extrema, formando jovens em transformação,
-								conservação e certificação de produtos locais.
+								{t('about_vision_text')}
 							</p>
 						</div>
 					</div>
@@ -189,15 +183,14 @@ export default function AboutPage() {
 			<section className="s-section">
 				<div className="s-container">
 					<div className="s-header">
-						<span className="s-eyebrow">Fundamentos</span>
-						<h2 className="s-title">Valores e Objectivos</h2>
+						<span className="s-eyebrow">{t('about_values_eyebrow')}</span>
+						<h2 className="s-title">{t('about_values_title')}</h2>
 					</div>
 					<div
 						className="home-page why-grid"
 						style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '24px' }}
 					>
-						<div
-							className="why-card"
+						<div className="why-card"
 							style={{
 								background: '#fff',
 								borderRadius: 'var(--radius-md)',
@@ -207,183 +200,109 @@ export default function AboutPage() {
 								transition: 'transform 0.3s, box-shadow 0.3s',
 							}}
 						>
-							<div
-								className="why-icon"
+							<div className="why-icon"
 								style={{
-									width: '52px',
-									height: '52px',
-									borderRadius: '50%',
-									background: 'rgba(134,186,9,0.1)',
-									display: 'flex',
-									alignItems: 'center',
-									justifyContent: 'center',
-									marginBottom: '16px',
-									fontSize: '22px',
-									color: 'var(--color-green)',
+									width: '52px', height: '52px', borderRadius: '50%',
+									background: 'rgba(134,186,9,0.1)', display: 'flex',
+									alignItems: 'center', justifyContent: 'center',
+									marginBottom: '16px', fontSize: '22px', color: 'var(--color-green)',
 								}}
 							>
 								<i className="fas fa-seedling" />
 							</div>
-							<h3
-								className="why-title"
-								style={{
-									fontFamily: "'Rubik', sans-serif",
-									fontSize: '18px',
-									fontWeight: 600,
-									color: 'var(--color-dark)',
-									margin: '0 0 8px',
-								}}
+							<h3 className="why-title"
+								style={{ fontFamily: "'Rubik', sans-serif", fontSize: '18px', fontWeight: 600, color: 'var(--color-dark)', margin: '0 0 8px' }}
 							>
-								Fomentar o espírito empreendedor jovem
+								{t('about_value_title_1')}
 							</h3>
-							<p
-								className="why-text"
+							<p className="why-text"
 								style={{ fontSize: '14px', lineHeight: '1.7', color: 'var(--color-muted)', margin: 0 }}
 							>
-								Acreditamos no potencial da juventude angolana como motor de transformação do sector
-								alimentar.
+								{t('about_value_text_1')}
 							</p>
 						</div>
-						<div
-							className="why-card"
+						<div className="why-card"
 							style={{
-								background: '#fff',
-								borderRadius: 'var(--radius-md)',
-								padding: '32px 28px',
-								boxShadow: 'var(--shadow-card)',
-								border: '1px solid transparent',
+								background: '#fff', borderRadius: 'var(--radius-md)', padding: '32px 28px',
+								boxShadow: 'var(--shadow-card)', border: '1px solid transparent',
 								transition: 'transform 0.3s, box-shadow 0.3s',
 							}}
 						>
-							<div
-								className="why-icon"
+							<div className="why-icon"
 								style={{
-									width: '52px',
-									height: '52px',
-									borderRadius: '50%',
-									background: 'rgba(134,186,9,0.1)',
-									display: 'flex',
-									alignItems: 'center',
-									justifyContent: 'center',
-									marginBottom: '16px',
-									fontSize: '22px',
-									color: 'var(--color-green)',
+									width: '52px', height: '52px', borderRadius: '50%',
+									background: 'rgba(134,186,9,0.1)', display: 'flex',
+									alignItems: 'center', justifyContent: 'center',
+									marginBottom: '16px', fontSize: '22px', color: 'var(--color-green)',
 								}}
 							>
 								<i className="fas fa-industry" />
 							</div>
-							<h3
-								className="why-title"
-								style={{
-									fontFamily: "'Rubik', sans-serif",
-									fontSize: '18px',
-									fontWeight: 600,
-									color: 'var(--color-dark)',
-									margin: '0 0 8px',
-								}}
+							<h3 className="why-title"
+								style={{ fontFamily: "'Rubik', sans-serif", fontSize: '18px', fontWeight: 600, color: 'var(--color-dark)', margin: '0 0 8px' }}
 							>
-								Criar pequenas e médias indústrias locais sustentáveis
+								{t('about_value_title_2')}
 							</h3>
-							<p
-								className="why-text"
+							<p className="why-text"
 								style={{ fontSize: '14px', lineHeight: '1.7', color: 'var(--color-muted)', margin: 0 }}
 							>
-								Impulsionar o desenvolvimento industrial local com modelos de negócio sustentáveis e
-								replicáveis.
+								{t('about_value_text_2')}
 							</p>
 						</div>
-						<div
-							className="why-card"
+						<div className="why-card"
 							style={{
-								background: '#fff',
-								borderRadius: 'var(--radius-md)',
-								padding: '32px 28px',
-								boxShadow: 'var(--shadow-card)',
-								border: '1px solid transparent',
+								background: '#fff', borderRadius: 'var(--radius-md)', padding: '32px 28px',
+								boxShadow: 'var(--shadow-card)', border: '1px solid transparent',
 								transition: 'transform 0.3s, box-shadow 0.3s',
 							}}
 						>
-							<div
-								className="why-icon"
+							<div className="why-icon"
 								style={{
-									width: '52px',
-									height: '52px',
-									borderRadius: '50%',
-									background: 'rgba(134,186,9,0.1)',
-									display: 'flex',
-									alignItems: 'center',
-									justifyContent: 'center',
-									marginBottom: '16px',
-									fontSize: '22px',
-									color: 'var(--color-green)',
+									width: '52px', height: '52px', borderRadius: '50%',
+									background: 'rgba(134,186,9,0.1)', display: 'flex',
+									alignItems: 'center', justifyContent: 'center',
+									marginBottom: '16px', fontSize: '22px', color: 'var(--color-green)',
 								}}
 							>
 								<i className="fas fa-users" />
 							</div>
-							<h3
-								className="why-title"
-								style={{
-									fontFamily: "'Rubik', sans-serif",
-									fontSize: '18px',
-									fontWeight: 600,
-									color: 'var(--color-dark)',
-									margin: '0 0 8px',
-								}}
+							<h3 className="why-title"
+								style={{ fontFamily: "'Rubik', sans-serif", fontSize: '18px', fontWeight: 600, color: 'var(--color-dark)', margin: '0 0 8px' }}
 							>
-								Reduzir o êxodo juvenil
+								{t('about_value_title_3')}
 							</h3>
-							<p
-								className="why-text"
+							<p className="why-text"
 								style={{ fontSize: '14px', lineHeight: '1.7', color: 'var(--color-muted)', margin: 0 }}
 							>
-								Gerar emprego e capacitação técnica para fixar os jovens nas suas comunidades de origem.
+								{t('about_value_text_3')}
 							</p>
 						</div>
-						<div
-							className="why-card"
+						<div className="why-card"
 							style={{
-								background: '#fff',
-								borderRadius: 'var(--radius-md)',
-								padding: '32px 28px',
-								boxShadow: 'var(--shadow-card)',
-								border: '1px solid transparent',
+								background: '#fff', borderRadius: 'var(--radius-md)', padding: '32px 28px',
+								boxShadow: 'var(--shadow-card)', border: '1px solid transparent',
 								transition: 'transform 0.3s, box-shadow 0.3s',
 							}}
 						>
-							<div
-								className="why-icon"
+							<div className="why-icon"
 								style={{
-									width: '52px',
-									height: '52px',
-									borderRadius: '50%',
-									background: 'rgba(134,186,9,0.1)',
-									display: 'flex',
-									alignItems: 'center',
-									justifyContent: 'center',
-									marginBottom: '16px',
-									fontSize: '22px',
-									color: 'var(--color-green)',
+									width: '52px', height: '52px', borderRadius: '50%',
+									background: 'rgba(134,186,9,0.1)', display: 'flex',
+									alignItems: 'center', justifyContent: 'center',
+									marginBottom: '16px', fontSize: '22px', color: 'var(--color-green)',
 								}}
 							>
 								<i className="fas fa-chart-line" />
 							</div>
-							<h3
-								className="why-title"
-								style={{
-									fontFamily: "'Rubik', sans-serif",
-									fontSize: '18px',
-									fontWeight: 600,
-									color: 'var(--color-dark)',
-									margin: '0 0 8px',
-								}}
+							<h3 className="why-title"
+								style={{ fontFamily: "'Rubik', sans-serif", fontSize: '18px', fontWeight: 600, color: 'var(--color-dark)', margin: '0 0 8px' }}
 							>
-								Contribuir para o crescimento económico e social
+								{t('about_value_title_4')}
 							</h3>
-							<p
-								className="why-text"
+							<p className="why-text"
 								style={{ fontSize: '14px', lineHeight: '1.7', color: 'var(--color-muted)', margin: 0 }}
 							>
-								Gerar impacto positivo em Angola e em África através da produção alimentar de qualidade.
+								{t('about_value_text_4')}
 							</p>
 						</div>
 					</div>

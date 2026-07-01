@@ -1,34 +1,34 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import products from '../data/products';
 
-const tabs = [
-	{ key: 'sumo_natural', label: 'Sumo Natural' },
-	{ key: 'detox', label: 'Detox & Energéticos' },
-	{ key: 'legumes_congelados', label: 'Legumes Congelados' },
-	{ key: 'quitutes', label: 'Quitutes' },
-	{ key: 'frango_premium', label: 'Frango Premium' },
-];
-
 export default function StorePage() {
+	const { t } = useTranslation();
 	const [activeTab, setActiveTab] = useState('sumo_natural');
+
+	const tabs = [
+		{ key: 'sumo_natural', label: t('store_tab_sumo') },
+		{ key: 'detox', label: t('store_tab_detox') },
+		{ key: 'legumes_congelados', label: t('store_tab_legumes') },
+		{ key: 'quitutes', label: t('store_tab_quitutes') },
+		{ key: 'frango_premium', label: t('store_tab_frango') },
+	];
 
 	return (
 		<>
 			<section className="page-hero" style={{ backgroundImage: 'url(/img/files/Loja-1920-x-1080.png)' }}>
 				<div className="page-hero-content">
-					<h1 className="page-hero-title">Catálogo</h1>
-					<p className="page-hero-subtitle">Consulte o nosso catálogo de produtos naturais e frescos</p>
+					<h1 className="page-hero-title">{t('store_hero_title')}</h1>
+					<p className="page-hero-subtitle">{t('store_hero_subtitle')}</p>
 				</div>
 			</section>
 
 			<section className="s-section">
 				<div className="s-container">
 					<div className="s-header">
-						<span className="s-eyebrow">Produtos</span>
-						<h2 className="s-title">Os Nossos Produtos</h2>
-						<p className="s-sub">
-							Produtos naturais, frescos e feitos com cuidado — da terra angolana para a sua mesa
-						</p>
+						<span className="s-eyebrow">{t('store_products_eyebrow')}</span>
+						<h2 className="s-title">{t('store_products_title')}</h2>
+						<p className="s-sub">{t('store_products_subtitle')}</p>
 					</div>
 
 					<div className="s-tabs">
@@ -60,13 +60,13 @@ export default function StorePage() {
 										</h4>
 										<span className="prod-price">{product.price}</span>
 										<a className="prod-btn" href="#">
-											COMPRAR
+											{t('store_buy_btn')}
 										</a>
 									</div>
 								))
 							) : (
 								<div style={{ gridColumn: '1 / -1', textAlign: 'center', padding: '60px 0' }}>
-									<p style={{ fontSize: '16px', color: 'var(--color-muted)' }}>Em breve</p>
+									<p style={{ fontSize: '16px', color: 'var(--color-muted)' }}>{t('store_coming_soon')}</p>
 								</div>
 							)}
 						</div>

@@ -43,7 +43,7 @@ export default function App() {
 				}
 			/>
 			<Route
-				path="/sobre"
+				path="/about"
 				element={
 					<Layout>
 						<AboutPage />
@@ -51,7 +51,7 @@ export default function App() {
 				}
 			/>
 			<Route
-				path="/marcas"
+				path="/brands"
 				element={
 					<Layout>
 						<BrandsPage />
@@ -59,7 +59,7 @@ export default function App() {
 				}
 			/>
 			<Route
-				path="/galeria"
+				path="/gallery"
 				element={
 					<Layout>
 						<GalleryPage />
@@ -67,7 +67,7 @@ export default function App() {
 				}
 			/>
 			<Route
-				path="/catalogo"
+				path="/catalog"
 				element={
 					<Layout>
 						<StorePage />
@@ -75,7 +75,7 @@ export default function App() {
 				}
 			/>
 			<Route
-				path="/marca/toto-drink"
+				path="/brand/toto-drink"
 				element={
 					<Layout>
 						<TotoDrinkPage />
@@ -83,7 +83,7 @@ export default function App() {
 				}
 			/>
 			<Route
-				path="/marca/toto-food"
+				path="/brand/toto-food"
 				element={
 					<Layout>
 						<TotoFoodPage />
@@ -91,7 +91,7 @@ export default function App() {
 				}
 			/>
 			<Route
-				path="/marca/frango-premium"
+				path="/brand/frango-premium"
 				element={
 					<Layout>
 						<FrangoPremiumPage />
@@ -99,7 +99,7 @@ export default function App() {
 				}
 			/>
 			<Route
-				path="/contacto"
+				path="/contact"
 				element={
 					<Layout>
 						<ContactPage />

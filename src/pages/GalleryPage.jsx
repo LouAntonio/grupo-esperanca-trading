@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import Lightbox from 'yet-another-react-lightbox';
 import 'yet-another-react-lightbox/styles.css';
 
@@ -11,16 +12,17 @@ const galleryImages = [
 	{ src: '/img/gallery/gallery6.jpg', alt: 'Quitutes', cat: 'cat3' },
 ];
 
-const filters = [
-	{ key: '*', label: 'Todas' },
-	{ key: 'cat2', label: 'Produtos' },
-	{ key: 'cat3', label: 'Eventos' },
-];
-
 export default function GalleryPage() {
+	const { t } = useTranslation();
 	const [activeFilter, setActiveFilter] = useState('*');
 	const [lightboxOpen, setLightboxOpen] = useState(false);
 	const [lightboxIndex, setLightboxIndex] = useState(0);
+
+	const filters = [
+		{ key: '*', label: t('gallery_filter_all') },
+		{ key: 'cat2', label: t('gallery_filter_products') },
+		{ key: 'cat3', label: t('gallery_filter_events') },
+	];
 
 	const filtered = activeFilter === '*' ? galleryImages : galleryImages.filter((img) => img.cat === activeFilter);
 
@@ -28,16 +30,16 @@ export default function GalleryPage() {
 		<>
 			<section className="page-hero" style={{ backgroundImage: 'url(/img/bg/bg3.jpg)' }}>
 				<div className="page-hero-content">
-					<h1 className="page-hero-title">Galeria</h1>
-					<p className="page-hero-subtitle">Veja imagens dos nossos produtos, eventos e muito mais...</p>
+					<h1 className="page-hero-title">{t('gallery_hero_title')}</h1>
+					<p className="page-hero-subtitle">{t('gallery_hero_subtitle')}</p>
 				</div>
 			</section>
 
 			<section className="s-section-alt">
 				<div className="s-container">
 					<div className="s-header">
-						<span className="s-eyebrow">Fotos</span>
-						<h2 className="s-title">A Nossa Galeria</h2>
+						<span className="s-eyebrow">{t('gallery_eyebrow')}</span>
+						<h2 className="s-title">{t('gallery_title')}</h2>
 					</div>
 
 					<div className="s-tabs">
@@ -64,7 +66,7 @@ export default function GalleryPage() {
 							>
 								<img src={img.src} alt={img.alt} />
 								<div className="gallery-card-overlay">
-									<span>Grupo Esperança Trading</span>
+									<span>{t('gallery_overlay_text')}</span>
 									<h3>{img.alt}</h3>
 								</div>
 							</div>

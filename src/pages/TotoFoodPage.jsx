@@ -1,21 +1,23 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import products from '../data/products';
 
-const tabs = [
-	{ key: 'legumes_congelados', label: 'Legumes Congelados' },
-	{ key: 'quitutes', label: 'Quitutes' },
-];
-
 export default function TotoFoodPage() {
+	const { t } = useTranslation();
 	const [activeTab, setActiveTab] = useState('legumes_congelados');
+
+	const tabs = [
+		{ key: 'legumes_congelados', label: t('toto_food_tab_legumes') },
+		{ key: 'quitutes', label: t('toto_food_tab_quitutes') },
+	];
 
 	return (
 		<>
 			<section className="page-hero" style={{ backgroundImage: 'url(/img/files/Loja-1920-x-1080.png)' }}>
 				<div className="page-hero-content">
-					<h1 className="page-hero-title">Toto Food</h1>
-					<p className="page-hero-subtitle">Linha alimentar tradicional africana</p>
+					<h1 className="page-hero-title">{t('toto_food_hero_title')}</h1>
+					<p className="page-hero-subtitle">{t('toto_food_hero_subtitle')}</p>
 				</div>
 			</section>
 
@@ -26,30 +28,21 @@ export default function TotoFoodPage() {
 							<img src="/img/files/628-x-893.png" alt="Toto Food" />
 						</div>
 						<div className="brand-showcase-text">
-							<span className="s-eyebrow">Marca</span>
-							<h2 className="s-title">Toto Food</h2>
-							<p className="brand-tagline-inline">Linha alimentar tradicional africana</p>
-							<p>
-								Uma linha centrada em pratos e conservas típicas africanas, que preserva o sabor
-								autêntico e as características nutricionais dos alimentos angolanos. Toto Food é a forma
-								de manter viva a tradição alimentar do nosso país, com qualidade industrial e confiança
-								de mesa.
-							</p>
-							<p style={{ marginTop: '16px' }}>
-								De legumes congelados tradicionais como ervilha, quiabo, fumbua e kizaca, a quitutes
-								engarrafados como gindungo em pó e jindungo preparado — a Toto Food traz o paladar de
-								Angola para todas as refeições, com a praticidade que o dia a dia exige.
-							</p>
-							<Link className="s-btn s-btn-primary" to="/catalogo">
-								Ver Catálogo Completo
+							<span className="s-eyebrow">{t('toto_food_brand_eyebrow')}</span>
+							<h2 className="s-title">{t('toto_food_hero_title')}</h2>
+							<p className="brand-tagline-inline">{t('toto_food_hero_subtitle')}</p>
+							<p>{t('toto_food_desc_1')}</p>
+							<p style={{ marginTop: '16px' }}>{t('toto_food_desc_2')}</p>
+							<Link className="s-btn s-btn-primary" to="/catalog">
+								{t('toto_food_catalog_btn')}
 							</Link>
 						</div>
 					</div>
 
 					<div className="s-header">
-						<span className="s-eyebrow">Produtos</span>
-						<h2 className="s-title">Os Nossos Produtos</h2>
-						<p className="s-sub">Conheça a linha completa de produtos Toto Food</p>
+						<span className="s-eyebrow">{t('toto_food_products_eyebrow')}</span>
+						<h2 className="s-title">{t('toto_food_products_title')}</h2>
+						<p className="s-sub">{t('toto_food_products_subtitle')}</p>
 					</div>
 
 					<div className="s-tabs">
@@ -81,13 +74,13 @@ export default function TotoFoodPage() {
 										</h4>
 										<span className="prod-price">{product.price}</span>
 										<a className="prod-btn" href="#">
-											COMPRAR
+											{t('store_buy_btn')}
 										</a>
 									</div>
 								))
 							) : (
 								<div style={{ gridColumn: '1 / -1', textAlign: 'center', padding: '60px 0' }}>
-									<p style={{ fontSize: '16px', color: 'var(--color-muted)' }}>Em breve</p>
+									<p style={{ fontSize: '16px', color: 'var(--color-muted)' }}>{t('store_coming_soon')}</p>
 								</div>
 							)}
 						</div>

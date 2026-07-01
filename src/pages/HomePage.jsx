@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import products from '../data/products';
 
 const row1 = [
@@ -87,6 +88,8 @@ function MarqueeRow({ images, speed = 0.6, dir }) {
 }
 
 export default function HomePage() {
+	const { t } = useTranslation();
+
 	return (
 		<>
 			<div className="slider-area slider-margin sliderMargin">
@@ -113,7 +116,7 @@ export default function HomePage() {
 									<span className="stat-plus">+</span>
 									<CountUp end={3} />
 								</div>
-								<span className="stat-label">Marcas</span>
+								<span className="stat-label">{t('home_stats_brands')}</span>
 							</div>
 							<div className="stat-item">
 								<div className="stat-bar" />
@@ -121,7 +124,7 @@ export default function HomePage() {
 									<span className="stat-plus">+</span>
 									<CountUp end={100} />
 								</div>
-								<span className="stat-label">% Orgânico</span>
+								<span className="stat-label">{t('home_stats_organic')}</span>
 							</div>
 							<div className="stat-item">
 								<div className="stat-bar" />
@@ -129,7 +132,7 @@ export default function HomePage() {
 									<span className="stat-plus">+</span>
 									<CountUp end={0} />
 								</div>
-								<span className="stat-label">Conservantes</span>
+								<span className="stat-label">{t('home_stats_preservatives')}</span>
 							</div>
 						</div>
 					</div>
@@ -139,24 +142,14 @@ export default function HomePage() {
 					<div className="s-container">
 						<div className="about-grid">
 							<div className="about-text-col">
-								<span className="s-eyebrow">Sobre Nós</span>
-								<h2 className="s-title">Quem Somos</h2>
+								<span className="s-eyebrow">{t('home_about_eyebrow')}</span>
+								<h2 className="s-title">{t('home_about_title')}</h2>
+								<p className="about-body">{t('home_about_body_1')}</p>
 								<p className="about-body">
-									O Grupo Esperança Trading, Lda é uma empresa angolana de transformação alimentar,
-									comprometida com o desenvolvimento industrial e a promoção da saúde através da
-									alimentação. Detentora das marcas Toto Drink e Toto Food, a empresa actua na
-									produção de sumos naturais sem conservantes e alimentos africanos tradicionais,
-									valorizando os produtos da terra e impulsionando o consumo orgânico em Angola e
-									além-fronteiras.
+									<strong>{t('about_hero_subtitle')}</strong> {t('home_about_body_2')}
 								</p>
-								<p className="about-body">
-									<strong>Da terra angolana para a sua mesa</strong> — Cada produto nasce do
-									compromisso com a terra, com os agricultores locais e com a saúde de quem nos
-									escolhe. Produzimos com respeito pela origem natural dos ingredientes, sem aditivos
-									químicos e sem conservantes.
-								</p>
-								<Link className="about-btn" to="/sobre">
-									Saiba Mais
+								<Link className="about-btn" to="/about">
+									{t('home_about_btn')}
 								</Link>
 							</div>
 							<div className="about-img-col">
@@ -171,48 +164,37 @@ export default function HomePage() {
 				<section className="s-section-alt">
 					<div className="s-container">
 						<div className="s-header">
-							<span className="s-eyebrow">Diferenciais</span>
-							<h2 className="s-title">Porque Nos Escolher</h2>
+							<span className="s-eyebrow">{t('home_different_eyebrow')}</span>
+							<h2 className="s-title">{t('home_different_title')}</h2>
 						</div>
 						<div className="why-grid">
 							<div className="why-card">
 								<div className="why-icon">
 									<i className="fas fa-globe-africa" />
 								</div>
-								<h3 className="why-title">100% Origem Angolana</h3>
-								<p className="why-text">
-									Ingredientes colhidos directamente da terra angolana, valorizando produtores e
-									tradições locais.
-								</p>
+								<h3 className="why-title">{t('home_why_title_1')}</h3>
+								<p className="why-text">{t('home_why_text_1')}</p>
 							</div>
 							<div className="why-card">
 								<div className="why-icon">
 									<i className="fas fa-ban" />
 								</div>
-								<h3 className="why-title">Sem Conservantes</h3>
-								<p className="why-text">
-									Produção natural, sem aditivos químicos, preservando o sabor genuíno e os benefícios
-									nutricionais.
-								</p>
+								<h3 className="why-title">{t('home_why_title_2')}</h3>
+								<p className="why-text">{t('home_why_text_2')}</p>
 							</div>
 							<div className="why-card">
 								<div className="why-icon">
 									<i className="fas fa-truck" />
 								</div>
-								<h3 className="why-title">Entrega à Sua Porta</h3>
-								<p className="why-text">
-									Faça a sua encomenda e receba directamente em casa, com rapidez e confiança.
-								</p>
+								<h3 className="why-title">{t('home_why_title_3')}</h3>
+								<p className="why-text">{t('home_why_text_3')}</p>
 							</div>
 							<div className="why-card">
 								<div className="why-icon">
 									<i className="fas fa-shopping-cart" />
 								</div>
-								<h3 className="why-title">Compra Online Facilitada</h3>
-								<p className="why-text">
-									Realize a sua compra directamente nas nossas plataformas digitais, de forma simples
-									e segura.
-								</p>
+								<h3 className="why-title">{t('home_why_title_4')}</h3>
+								<p className="why-text">{t('home_why_text_4')}</p>
 							</div>
 						</div>
 					</div>
@@ -221,53 +203,42 @@ export default function HomePage() {
 				<section className="s-section">
 					<div className="s-container">
 						<div className="s-header">
-							<span className="s-eyebrow">Marcas</span>
-							<h2 className="s-title">As Nossas Marcas</h2>
-							<p className="s-sub">
-								Três marcas, um compromisso: levar o melhor da terra angolana até si
-							</p>
+							<span className="s-eyebrow">{t('home_brands_eyebrow')}</span>
+							<h2 className="s-title">{t('home_brands_title')}</h2>
+							<p className="s-sub">{t('home_brands_subtitle')}</p>
 						</div>
 						<div className="brands-grid">
 							<div className="brand-card">
 								<div className="brand-icon">
 									<i className="fas fa-leaf" />
 								</div>
-								<h3 className="brand-name">Toto Drink</h3>
-								<p className="brand-tagline">Sumos naturais, 100% orgânicos, sem conservantes</p>
-								<p className="brand-desc">
-									Produzidos a partir de frutas locais cuidadosamente seleccionadas, os sumos Toto
-									Drink trazem o sabor genuíno de Angola directamente para a sua mesa.
-								</p>
-								<Link className="brand-btn" to="/marcas">
-									Saber Mais
+								<h3 className="brand-name">{t('home_brand_toto_name')}</h3>
+								<p className="brand-tagline">{t('home_brand_toto_tagline')}</p>
+								<p className="brand-desc">{t('home_brand_toto_desc')}</p>
+								<Link className="brand-btn" to="/brands">
+									{t('home_brand_toto_btn')}
 								</Link>
 							</div>
 							<div className="brand-card">
 								<div className="brand-icon">
 									<i className="fas fa-utensils" />
 								</div>
-								<h3 className="brand-name">Toto Food</h3>
-								<p className="brand-tagline">Linha alimentar tradicional africana</p>
-								<p className="brand-desc">
-									Uma linha centrada em pratos e conservas típicas africanas, que preserva o sabor
-									autêntico e as características nutricionais dos alimentos angolanos.
-								</p>
-								<Link className="brand-btn" to="/marcas">
-									Saber Mais
+								<h3 className="brand-name">{t('home_brand_tofood_name')}</h3>
+								<p className="brand-tagline">{t('home_brand_tofood_tagline')}</p>
+								<p className="brand-desc">{t('home_brand_tofood_desc')}</p>
+								<Link className="brand-btn" to="/brands">
+									{t('home_brand_tofood_btn')}
 								</Link>
 							</div>
 							<div className="brand-card">
 								<div className="brand-icon">
 									<i className="fas fa-drumstick-bite" />
 								</div>
-								<h3 className="brand-name">Frango Premium</h3>
-								<p className="brand-tagline">Frango grelhado e assado, com acompanhamentos típicos</p>
-								<p className="brand-desc">
-									Frango grelhado ou assado, servido com kiquanga, banana-pão frita ou batata —
-									qualidade premium ao sabor tradicional angolano.
-								</p>
-								<Link className="brand-btn" to="/marcas">
-									Saber Mais
+								<h3 className="brand-name">{t('home_brand_frango_name')}</h3>
+								<p className="brand-tagline">{t('home_brand_frango_tagline')}</p>
+								<p className="brand-desc">{t('home_brand_frango_desc')}</p>
+								<Link className="brand-btn" to="/brands">
+									{t('home_brand_frango_btn')}
 								</Link>
 							</div>
 						</div>
@@ -277,9 +248,9 @@ export default function HomePage() {
 				<section className="s-section-alt">
 					<div className="s-container">
 						<div className="s-header">
-							<span className="s-eyebrow">Produtos</span>
-							<h2 className="s-title">Nossos Produtos</h2>
-							<p className="s-sub">Conheça a nossa linha de produtos naturais</p>
+							<span className="s-eyebrow">{t('home_products_eyebrow')}</span>
+							<h2 className="s-title">{t('home_products_title')}</h2>
+							<p className="s-sub">{t('home_products_subtitle')}</p>
 						</div>
 						<div className="products-grid">
 							{products.sumo_natural.slice(0, 4).map((product, i) => (
@@ -296,13 +267,13 @@ export default function HomePage() {
 									</h4>
 									<span className="prod-price">{product.price}</span>
 									<a className="prod-btn" href="#">
-										COMPRAR
+										{t('home_product_buy_btn')}
 									</a>
 								</div>
 							))}
 						</div>
 						<div className="products-more">
-							<Link to="/catalogo">Veja Mais</Link>
+							<Link to="/catalog">{t('home_product_see_more')}</Link>
 						</div>
 					</div>
 				</section>
@@ -310,12 +281,10 @@ export default function HomePage() {
 				<section className="s-cta">
 					<div className="s-container">
 						<div className="cta-content">
-							<h2 className="cta-title">Faça já a sua encomenda</h2>
-							<p className="cta-text">
-								Da terra angolana para a sua mesa — produtos naturais, frescos e feitos com cuidado.
-							</p>
-							<Link className="cta-btn" to="/contacto">
-								Encomendar Agora
+							<h2 className="cta-title">{t('home_cta_title')}</h2>
+							<p className="cta-text">{t('home_cta_text')}</p>
+							<Link className="cta-btn" to="/contact">
+								{t('home_cta_btn')}
 							</Link>
 						</div>
 					</div>

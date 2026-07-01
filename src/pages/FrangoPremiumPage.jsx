@@ -1,18 +1,20 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import products from '../data/products';
 
-const tabs = [{ key: 'frango_premium', label: 'Frango Premium' }];
-
 export default function FrangoPremiumPage() {
+	const { t } = useTranslation();
 	const [activeTab, setActiveTab] = useState('frango_premium');
+
+	const tabs = [{ key: 'frango_premium', label: t('frango_tab_frango') }];
 
 	return (
 		<>
 			<section className="page-hero" style={{ backgroundImage: 'url(/img/files/Loja-1920-x-1080.png)' }}>
 				<div className="page-hero-content">
-					<h1 className="page-hero-title">Frango Premium</h1>
-					<p className="page-hero-subtitle">Frango grelhado e assado, com acompanhamentos típicos</p>
+					<h1 className="page-hero-title">{t('frango_hero_title')}</h1>
+					<p className="page-hero-subtitle">{t('frango_hero_subtitle')}</p>
 				</div>
 			</section>
 
@@ -23,31 +25,21 @@ export default function FrangoPremiumPage() {
 							<img src="/img/files/628-x-893.png" alt="Frango Premium" />
 						</div>
 						<div className="brand-showcase-text">
-							<span className="s-eyebrow">Marca</span>
-							<h2 className="s-title">Frango Premium</h2>
-							<p className="brand-tagline-inline">
-								Frango grelhado e assado, com acompanhamentos típicos
-							</p>
-							<p>
-								Frango grelhado ou assado, servido com kiquanga, banana-pão frita ou batata — uma
-								proposta gastronómica que une qualidade premium ao sabor tradicional angolano, ideal
-								para o dia a dia ou para eventos especiais.
-							</p>
-							<p style={{ marginTop: '16px' }}>
-								Cada refeição é preparada com ingredientes seleccionados e temperos tradicionais,
-								garantindo uma experiência que combina o melhor da culinária angolana com o rigor e a
-								qualidade que a marca Frango Premium representa.
-							</p>
-							<Link className="s-btn s-btn-primary" to="/catalogo">
-								Ver Catálogo Completo
+							<span className="s-eyebrow">{t('frango_brand_eyebrow')}</span>
+							<h2 className="s-title">{t('frango_hero_title')}</h2>
+							<p className="brand-tagline-inline">{t('frango_hero_subtitle')}</p>
+							<p>{t('frango_desc_1')}</p>
+							<p style={{ marginTop: '16px' }}>{t('frango_desc_2')}</p>
+							<Link className="s-btn s-btn-primary" to="/catalog">
+								{t('frango_catalog_btn')}
 							</Link>
 						</div>
 					</div>
 
 					<div className="s-header">
-						<span className="s-eyebrow">Produtos</span>
-						<h2 className="s-title">Os Nossos Produtos</h2>
-						<p className="s-sub">Conheça a linha completa de produtos Frango Premium</p>
+						<span className="s-eyebrow">{t('frango_products_eyebrow')}</span>
+						<h2 className="s-title">{t('frango_products_title')}</h2>
+						<p className="s-sub">{t('frango_products_subtitle')}</p>
 					</div>
 
 					<div className="s-tabs">
@@ -79,13 +71,13 @@ export default function FrangoPremiumPage() {
 										</h4>
 										<span className="prod-price">{product.price}</span>
 										<a className="prod-btn" href="#">
-											COMPRAR
+											{t('store_buy_btn')}
 										</a>
 									</div>
 								))
 							) : (
 								<div style={{ gridColumn: '1 / -1', textAlign: 'center', padding: '60px 0' }}>
-									<p style={{ fontSize: '16px', color: 'var(--color-muted)' }}>Em breve</p>
+									<p style={{ fontSize: '16px', color: 'var(--color-muted)' }}>{t('store_coming_soon')}</p>
 								</div>
 							)}
 						</div>
