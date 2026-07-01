@@ -14,83 +14,55 @@ export default function StorePage() {
 
   return (
     <>
-      <div className="breadcrumb-area breadcrumb-margin pt-260 pb-180" style={{ backgroundImage: 'url(/img/files/Loja-1920-x-1080.png)' }}>
-        <div className="container">
-          <div className="row">
-            <div className="col-xl-12">
-              <div className="breadcrumb-text text-center">
-                <h1>Loja</h1>
-                <ul className="breadcrumb-menu">
-                  <li><a href="/">home</a></li>
-                  <li><span>Loja</span></li>
-                </ul>
-              </div>
-            </div>
-          </div>
+      <section className="page-hero" style={{ backgroundImage: 'url(/img/files/Loja-1920-x-1080.png)' }}>
+        <div className="page-hero-content">
+          <h1 className="page-hero-title">Loja</h1>
+          <p className="page-hero-subtitle">Produtos naturais, frescos e feitos com cuidado</p>
         </div>
-      </div>
+      </section>
 
-      <div className="product-area pos-relative pt-110 pb-120 fix">
-        <div className="container">
-          <div className="row">
-            <div className="col-12">
-              <div className="section-title section-title-cap text-center mb-5">
-                <h2>Os Nossos Produtos</h2>
-                <p>Produtos naturais, frescos e feitos com cuidado — da terra angolana para a sua mesa</p>
-              </div>
-            </div>
+      <section className="s-section">
+        <div className="s-container">
+          <div className="s-header">
+            <span className="s-eyebrow">Produtos</span>
+            <h2 className="s-title">Os Nossos Produtos</h2>
+            <p className="s-sub">Produtos naturais, frescos e feitos com cuidado — da terra angolana para a sua mesa</p>
           </div>
-          <div className="row">
-            <div className="col-12">
-              <ul className="nav nav-tabs" id="productTab" role="tablist">
-                {tabs.map((tab) => (
-                  <li key={tab.key} className="nav-item">
-                    <a
-                      className={`nav-link ${activeTab === tab.key ? 'active' : ''}`}
-                      href="#"
-                      onClick={(e) => { e.preventDefault(); setActiveTab(tab.key) }}
-                    >
-                      {tab.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-              <div className="tab-content" id="productTabContent">
-                {tabs.map((tab) => (
-                  <div
-                    key={tab.key}
-                    className={`tab-pane fade ${activeTab === tab.key ? 'show active' : ''}`}
-                  >
-                    <div className="row">
-                      {products[tab.key]?.length > 0 ? (
-                        products[tab.key].map((product, i) => (
-                          <div key={i} className="col-xl-3 col-lg-3 col-md-6">
-                            <div className="product-wrapper text-center mb-30">
-                              <div className="product-img">
-                                <a href="#"><img src={product.image} alt={product.name} /></a>
-                              </div>
-                              <div className="product-text">
-                                <h4><a href="#">{product.name}</a></h4>
-                                <div className="pro-price"><span>{product.price}</span></div>
-                                <br />
-                                <a className="btn px-2 py-2" href="#">COMPRAR</a>
-                              </div>
-                            </div>
-                          </div>
-                        ))
-                      ) : (
-                        <div className="col-12 text-center py-5">
-                          <p>Em breve</p>
-                        </div>
-                      )}
-                    </div>
+
+          <div className="s-tabs">
+            {tabs.map((tab) => (
+              <button
+                key={tab.key}
+                className={`s-tab ${activeTab === tab.key ? 'active' : ''}`}
+                onClick={() => setActiveTab(tab.key)}
+              >
+                {tab.label}
+              </button>
+            ))}
+          </div>
+
+          <div className="home-page products-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '24px' }}>
+            {products[activeTab]?.length > 0 ? (
+              products[activeTab].map((product, i) => (
+                <div key={i} className="prod-card" style={{ background: '#f1f6fa', borderRadius: 'var(--radius-md)', padding: '32px 16px 24px', textAlign: 'center', transition: 'transform 0.3s, box-shadow 0.3s' }}>
+                  <div className="prod-img" style={{ marginBottom: '20px' }}>
+                    <a href="#"><img src={product.image} alt={product.name} style={{ width: '100%', maxWidth: '180px', height: '160px', objectFit: 'contain', display: 'block', margin: '0 auto' }} /></a>
                   </div>
-                ))}
+                  <h4 className="prod-name" style={{ fontFamily: "'Rubik', sans-serif", fontSize: '16px', fontWeight: 600, color: 'var(--color-dark)', margin: '0 0 6px' }}>
+                    <a href="#" style={{ color: 'inherit', textDecoration: 'none' }}>{product.name}</a>
+                  </h4>
+                  <span className="prod-price" style={{ fontSize: '14px', fontWeight: 500, color: 'var(--color-muted)', display: 'block', marginBottom: '16px' }}>{product.price}</span>
+                  <a className="prod-btn" href="#" style={{ display: 'inline-block', fontFamily: "'Rubik', sans-serif", fontSize: '12px', fontWeight: 600, letterSpacing: '1.5px', textTransform: 'uppercase', textDecoration: 'none', color: '#fff !important', background: 'var(--color-green) !important', padding: '10px 28px', borderRadius: '30px' }}>COMPRAR</a>
+                </div>
+              ))
+            ) : (
+              <div style={{ gridColumn: '1 / -1', textAlign: 'center', padding: '60px 0' }}>
+                <p style={{ fontSize: '16px', color: 'var(--color-muted)' }}>Em breve</p>
               </div>
-            </div>
+            )}
           </div>
         </div>
-      </div>
+      </section>
     </>
   )
 }

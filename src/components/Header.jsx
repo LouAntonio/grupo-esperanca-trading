@@ -38,12 +38,12 @@ export default function Header() {
               <div className="main-menu" style={{ textAlign: 'right' }}>
                 <nav id="mobile-menu">
                   <ul>
-                    <li><Link to="/">home</Link></li>
+                    <li><Link to="/">Home</Link></li>
                     <li><Link to="/sobre">Sobre</Link></li>
                     <li><Link to="/marcas">Marcas</Link></li>
                     <li><Link to="/loja">Loja</Link></li>
                     <li><Link to="/galeria">Galeria</Link></li>
-                    <li><Link to="/contacto">contacto</Link></li>
+                    <li><Link to="/contacto">Contacto</Link></li>
                   </ul>
                 </nav>
               </div>

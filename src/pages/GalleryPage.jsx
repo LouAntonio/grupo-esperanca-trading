@@ -28,72 +28,49 @@ export default function GalleryPage() {
 
   return (
     <>
-      <div className="breadcrumb-area breadcrumb-margin pt-260 pb-180 d-none" style={{ backgroundImage: 'url(/img/bg/bg15.jpg)' }}>
-        <div className="container">
-          <div className="row">
-            <div className="col-xl-12">
-              <div className="breadcrumb-text text-center">
-                <h1>Galeria</h1>
-                <ul className="breadcrumb-menu">
-                  <li><a href="/">home</a></li>
-                  <li><span>Galeria</span></li>
-                </ul>
-              </div>
-            </div>
-          </div>
+      <section className="page-hero" style={{ backgroundImage: 'url(/img/bg/bg15.jpg)' }}>
+        <div className="page-hero-content">
+          <h1 className="page-hero-title">Galeria</h1>
+          <p className="page-hero-subtitle">Veja imagens dos nossos produtos, eventos e muito mais...</p>
         </div>
-      </div>
-      <div id="portfolio" className="gallery-area pb-90 pt-115" style={{ backgroundImage: 'url(/img/bg/bg3.jpg)' }}>
-        <div className="container">
-          <div className="row">
-            <div className="col-xl-6 col-lg-6 offset-lg-3 offset-xl-3">
-              <div className="section-title text-center mb-65">
-                <h1>A nossa galeria</h1>
-                <p>Veja imagens dos nossos produtos, eventos e muito mais...</p>
-              </div>
-            </div>
+      </section>
+
+      <section className="s-section-alt">
+        <div className="s-container">
+          <div className="s-header">
+            <span className="s-eyebrow">Fotos</span>
+            <h2 className="s-title">A Nossa Galeria</h2>
           </div>
-          <div className="row">
-            <div className="col-xl-10 col-lg-10 offset-lg-1 offset-xl-1">
-              <div className="portfolio-menu mb-50 text-center">
-                {filters.map((f) => (
-                  <button
-                    key={f.key}
-                    className={activeFilter === f.key ? 'active' : ''}
-                    onClick={() => setActiveFilter(f.key)}
-                  >
-                    {f.label}
-                  </button>
-                ))}
-              </div>
-            </div>
+
+          <div className="s-tabs">
+            {filters.map((f) => (
+              <button
+                key={f.key}
+                className={`s-tab ${activeFilter === f.key ? 'active' : ''}`}
+                onClick={() => setActiveFilter(f.key)}
+              >
+                {f.label}
+              </button>
+            ))}
           </div>
-          <div className="row grid">
+
+          <div className="gallery-grid">
             {filtered.map((img, i) => (
-              <div key={i} className="col-xl-4 col-lg-4 col-md-6 grid-item">
-                <div className="gallery-wrapper mb-30">
-                  <div className="gallery-img">
-                    <a
-                      href="#"
-                      onClick={(e) => {
-                        e.preventDefault()
-                        setLightboxIndex(i)
-                        setLightboxOpen(true)
-                      }}
-                    >
-                      <img src={img.src} alt={img.alt} />
-                    </a>
-                    <div className="gallery-text">
-                      <span>Grupo Esperança Trading</span>
-                      <h3><a href="#">{img.alt}</a></h3>
-                    </div>
-                  </div>
+              <div
+                key={i}
+                className="gallery-card"
+                onClick={() => { setLightboxIndex(i); setLightboxOpen(true) }}
+              >
+                <img src={img.src} alt={img.alt} />
+                <div className="gallery-card-overlay">
+                  <span>Grupo Esperança Trading</span>
+                  <h3>{img.alt}</h3>
                 </div>
               </div>
             ))}
           </div>
         </div>
-      </div>
+      </section>
 
       <Lightbox
         open={lightboxOpen}
