@@ -232,18 +232,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <div className="s-social">
-        <div className="s-container">
-          <div className="social-layout">
-            <BrandsCarousel />
-            <div className="social-links">
-              <a className="social-link" href="#" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f" /></a>
-              <a className="social-link" href="#" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram" /></a>
-              <a className="social-link" href="#" target="_blank" rel="noopener noreferrer"><i className="fab fa-whatsapp" /></a>
-            </div>
-          </div>
-        </div>
-      </div>
       </div>
     </>
   )
@@ -287,25 +275,4 @@ function CountUp({ end }) {
   return <h1 className="counter" ref={ref}>{count}</h1>
 }
 
-function BrandsCarousel() {
-  const brands = [
-    { name: 'Toto Drink', icon: 'fa-leaf', color: '#4caf50' },
-    { name: 'Toto Food', icon: 'fa-utensils', color: '#8d6e63' },
-    { name: 'Frango Premium', icon: 'fa-drumstick-bite', color: '#ff7043' },
-  ]
-  return (
-    <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
-      {brands.map((b, i) => (
-        <span key={i} style={{
-          display: 'inline-flex', alignItems: 'center', gap: '8px',
-          padding: '8px 20px', borderRadius: '30px',
-          background: 'rgba(0,0,0,0.03)', fontSize: '14px',
-          fontWeight: 500, fontFamily: "'Rubik', sans-serif", color: '#555',
-        }}>
-          <i className={`fas ${b.icon}`} style={{ color: b.color }} />
-          {b.name}
-        </span>
-      ))}
-    </div>
-  )
-}
+

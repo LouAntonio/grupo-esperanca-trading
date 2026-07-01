@@ -23,7 +23,6 @@ export default function Footer() {
             <li><Link to="/marca/toto-drink">Toto Drink — Sumos Naturais</Link></li>
             <li><Link to="/marca/toto-food">Toto Food — Linha Tradicional</Link></li>
             <li><Link to="/marca/frango-premium">Frango Premium</Link></li>
-            <li><Link to="/catalogo">Catálogo</Link></li>
           </ul>
         </div>
 
