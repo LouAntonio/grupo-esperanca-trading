@@ -57,7 +57,7 @@ function MarqueeRow({ images, speed = 0.6, dir }) {
     >
       <div ref={trackRef} style={{ display: 'flex', width: 'max-content' }}>
         {[...images, ...images, ...images].map((src, i) => (
-          <img key={i} src={src} alt="" style={{ height: 160, display: 'block' }} />
+          <img key={i} src={src} alt="" style={{ height: 200, display: 'block' }} />
         ))}
       </div>
     </div>
