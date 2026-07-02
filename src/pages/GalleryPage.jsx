@@ -4,12 +4,12 @@ import Lightbox from 'yet-another-react-lightbox';
 import 'yet-another-react-lightbox/styles.css';
 
 const galleryImages = [
-	{ src: '/img/gallery/gallery1.jpg', alt: 'Produtos Toto Drink', cat: 'cat2' },
-	{ src: '/img/gallery/gallery2.jpg', alt: 'Frango Premium', cat: 'cat3' },
-	{ src: '/img/gallery/gallery3.jpg', alt: 'Sumos Naturais', cat: 'cat2' },
-	{ src: '/img/gallery/gallery4.jpg', alt: 'Legumes Congelados', cat: 'cat2' },
-	{ src: '/img/gallery/gallery5.jpg', alt: 'Eventos', cat: 'cat3' },
-	{ src: '/img/gallery/gallery6.jpg', alt: 'Quitutes', cat: 'cat3' },
+	{ src: '/img/catalogo/rama.png', alt: 'Sumo Natural de Manga', cat: 'cat2' },
+	{ src: '/img/catalogo/detox.png', alt: 'Sumo Detox Verde', cat: 'cat2' },
+	{ src: '/img/catalogo/ananas.png', alt: 'Sumo Natural de Ananás', cat: 'cat2' },
+	{ src: '/img/catalogo/quiabo.png', alt: 'Quiabo Congelado', cat: 'cat2' },
+	{ src: '/img/slider/Imagem-1.png', alt: 'Grupo Esperança Trading', cat: 'cat3' },
+	{ src: '/img/slider/Imagem-2.png', alt: 'Produtos Naturais', cat: 'cat3' },
 ];
 
 export default function GalleryPage() {

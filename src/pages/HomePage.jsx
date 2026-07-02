@@ -209,10 +209,9 @@ export default function HomePage() {
 						</div>
 						<div className="brands-grid">
 							<div className="brand-card">
-								<div className="brand-icon">
-									<img src="/img/marcas/totodrink.png" alt="" style={{ maxHeight: '120px' }} />
+								<div className="brand-icon mb-4">
+									<img src="/img/marcas/totodrink.png" alt="" style={{ maxHeight: '100px' }} />
 								</div>
-								<h3 className="brand-name">{t('home_brand_toto_name')}</h3>
 								<p className="brand-tagline">{t('home_brand_toto_tagline')}</p>
 								<p className="brand-desc">{t('home_brand_toto_desc')}</p>
 								<Link className="brand-btn" to="/brands">
@@ -220,10 +219,9 @@ export default function HomePage() {
 								</Link>
 							</div>
 							<div className="brand-card">
-								<div className="brand-icon">
-									<img src="/img/marcas/totofood.png" alt="" style={{ maxHeight: '120px' }} />
+								<div className="brand-icon mb-4">
+									<img src="/img/marcas/totofood.png" alt="" style={{ maxHeight: '100px' }} />
 								</div>
-								<h3 className="brand-name">{t('home_brand_tofood_name')}</h3>
 								<p className="brand-tagline">{t('home_brand_tofood_tagline')}</p>
 								<p className="brand-desc">{t('home_brand_tofood_desc')}</p>
 								<Link className="brand-btn" to="/brands">
@@ -231,10 +229,9 @@ export default function HomePage() {
 								</Link>
 							</div>
 							<div className="brand-card">
-								<div className="brand-icon">
-									<img src="/img/marcas/frangopremium.png" alt="" style={{ maxHeight: '120px' }} />
+								<div className="brand-icon mb-4">
+									<img src="/img/marcas/frangopremium.png" alt="" style={{ maxHeight: '100px' }} />
 								</div>
-								<h3 className="brand-name">{t('home_brand_frango_name')}</h3>
 								<p className="brand-tagline">{t('home_brand_frango_tagline')}</p>
 								<p className="brand-desc">{t('home_brand_frango_desc')}</p>
 								<Link className="brand-btn" to="/brands">
