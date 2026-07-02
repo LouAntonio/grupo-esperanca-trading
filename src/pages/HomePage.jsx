@@ -4,16 +4,16 @@ import { useTranslation } from 'react-i18next';
 import products from '../data/products';
 
 const row1 = [
-	'/img/files/slider/1.png',
-	'/img/files/slider/2.png',
-	'/img/files/slider/3.png',
-	'/img/files/slider/4.png',
+	'/img/slider/Imagem-1.png',
+	'/img/slider/Imagem-2.png',
+	'/img/slider/Imagem-3.png',
+	'/img/slider/Imagem-4.png',
 ];
 const row2 = [
-	'/img/files/slider/5.png',
-	'/img/files/slider/6.png',
-	'/img/files/slider/7.png',
-	'/img/files/slider/8.png',
+	'/img/slider/Imagem-5.png',
+	'/img/slider/Imagem-6.png',
+	'/img/slider/Imagem-7.png',
+	'/img/slider/Imagem-8.png',
 ];
 
 function MarqueeRow({ images, speed = 0.6, dir }) {
@@ -210,7 +210,7 @@ export default function HomePage() {
 						<div className="brands-grid">
 							<div className="brand-card">
 								<div className="brand-icon">
-									<i className="fas fa-leaf" />
+									<img src="/img/marcas/totodrink.png" alt="" style={{ maxHeight: '120px' }} />
 								</div>
 								<h3 className="brand-name">{t('home_brand_toto_name')}</h3>
 								<p className="brand-tagline">{t('home_brand_toto_tagline')}</p>
@@ -221,7 +221,7 @@ export default function HomePage() {
 							</div>
 							<div className="brand-card">
 								<div className="brand-icon">
-									<i className="fas fa-utensils" />
+									<img src="/img/marcas/totofood.png" alt="" style={{ maxHeight: '120px' }} />
 								</div>
 								<h3 className="brand-name">{t('home_brand_tofood_name')}</h3>
 								<p className="brand-tagline">{t('home_brand_tofood_tagline')}</p>
@@ -232,7 +232,7 @@ export default function HomePage() {
 							</div>
 							<div className="brand-card">
 								<div className="brand-icon">
-									<i className="fas fa-drumstick-bite" />
+									<img src="/img/marcas/frangopremium.png" alt="" style={{ maxHeight: '120px' }} />
 								</div>
 								<h3 className="brand-name">{t('home_brand_frango_name')}</h3>
 								<p className="brand-tagline">{t('home_brand_frango_tagline')}</p>
