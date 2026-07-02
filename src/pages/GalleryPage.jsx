@@ -3,14 +3,26 @@ import { useTranslation } from 'react-i18next';
 import Lightbox from 'yet-another-react-lightbox';
 import 'yet-another-react-lightbox/styles.css';
 
-const galleryImages = [
-	{ src: '/img/catalogo/rama.png', alt: 'Sumo Natural de Manga', cat: 'cat2' },
-	{ src: '/img/catalogo/detox.png', alt: 'Sumo Detox Verde', cat: 'cat2' },
-	{ src: '/img/catalogo/ananas.png', alt: 'Sumo Natural de Ananás', cat: 'cat2' },
-	{ src: '/img/catalogo/quiabo.png', alt: 'Quiabo Congelado', cat: 'cat2' },
-	{ src: '/img/slider/Imagem-1.png', alt: 'Grupo Esperança Trading', cat: 'cat3' },
-	{ src: '/img/slider/Imagem-2.png', alt: 'Produtos Naturais', cat: 'cat3' },
+const catalogoImages = [
+	{ src: '/img/catalogo/rama.png', alt: 'Rama', cat: 'cat2' },
+	{ src: '/img/catalogo/quizaca.png', alt: 'Quizaca', cat: 'cat2' },
+	{ src: '/img/catalogo/quiabo.png', alt: 'Quiabo', cat: 'cat2' },
+	{ src: '/img/catalogo/mucua.png', alt: 'Mucua', cat: 'cat2' },
+	{ src: '/img/catalogo/hibisco.png', alt: 'Hibisco', cat: 'cat2' },
+	{ src: '/img/catalogo/gindungo.png', alt: 'Gindungo', cat: 'cat2' },
+	{ src: '/img/catalogo/detox.png', alt: 'Detox', cat: 'cat2' },
+	{ src: '/img/catalogo/ananas.png', alt: 'Ananás', cat: 'cat2' },
+	{ src: '/img/catalogo/0B5A1056.png', alt: 'Sumo Natural', cat: 'cat2' },
+	{ src: '/img/catalogo/0B5A1080.png', alt: 'Sumo Natural', cat: 'cat2' },
 ];
+
+const sliderImages = Array.from({ length: 22 }, (_, i) => ({
+	src: `/img/slider/Imagem-${i + 1}.png`,
+	alt: `Imagem ${i + 1}`,
+	cat: 'cat3',
+}));
+
+const galleryImages = [...catalogoImages, ...sliderImages];
 
 export default function GalleryPage() {
 	const { t } = useTranslation();
