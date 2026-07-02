@@ -18,7 +18,7 @@ export default function BrandsPage() {
 				<div className="s-container">
 					<div className="brand-showcase">
 						<div className="brand-showcase-img">
-							<img src="/img/files/628-x-893.png" alt="Toto Drink" />
+							<img src="/img/marcas/totodrink.png" alt="Toto Drink" />
 						</div>
 						<div className="brand-showcase-text">
 							<span className="s-eyebrow">{t('brands_brand_eyebrow')}</span>
@@ -37,7 +37,7 @@ export default function BrandsPage() {
 				<div className="s-container">
 					<div className="brand-showcase reverse">
 						<div className="brand-showcase-img">
-							<img src="/img/files/628-x-893.png" alt="Toto Food" />
+							<img src="/img/marcas/totofood.png" alt="Toto Food" />
 						</div>
 						<div className="brand-showcase-text">
 							<span className="s-eyebrow">{t('brands_brand_eyebrow')}</span>
@@ -56,7 +56,7 @@ export default function BrandsPage() {
 				<div className="s-container">
 					<div className="brand-showcase">
 						<div className="brand-showcase-img">
-							<img src="/img/files/628-x-893.png" alt="Frango Premium" />
+							<img src="/img/marcas/frangopremium.png" alt="Frango Premium" />
 						</div>
 						<div className="brand-showcase-text">
 							<span className="s-eyebrow">{t('brands_brand_eyebrow')}</span>

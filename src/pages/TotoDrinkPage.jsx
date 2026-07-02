@@ -25,7 +25,7 @@ export default function TotoDrinkPage() {
 				<div className="s-container">
 					<div className="brand-showcase" style={{ marginBottom: '60px' }}>
 						<div className="brand-showcase-img">
-							<img src="/img/files/628-x-893.png" alt="Toto Drink" />
+							<img src="/img/marcas/totodrink.png" alt="Toto Drink" />
 						</div>
 						<div className="brand-showcase-text">
 							<span className="s-eyebrow">{t('toto_drink_brand_eyebrow')}</span>

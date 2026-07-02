@@ -22,7 +22,7 @@ export default function FrangoPremiumPage() {
 				<div className="s-container">
 					<div className="brand-showcase" style={{ marginBottom: '60px' }}>
 						<div className="brand-showcase-img">
-							<img src="/img/files/628-x-893.png" alt="Frango Premium" />
+							<img src="/img/marcas/frangopremium.png" alt="Frango Premium" />
 						</div>
 						<div className="brand-showcase-text">
 							<span className="s-eyebrow">{t('frango_brand_eyebrow')}</span>

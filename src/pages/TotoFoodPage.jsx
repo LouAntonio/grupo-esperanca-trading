@@ -25,7 +25,7 @@ export default function TotoFoodPage() {
 				<div className="s-container">
 					<div className="brand-showcase" style={{ marginBottom: '60px' }}>
 						<div className="brand-showcase-img">
-							<img src="/img/files/628-x-893.png" alt="Toto Food" />
+							<img src="/img/marcas/totofood.png" alt="Toto Food" />
 						</div>
 						<div className="brand-showcase-text">
 							<span className="s-eyebrow">{t('toto_food_brand_eyebrow')}</span>
